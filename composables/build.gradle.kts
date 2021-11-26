@@ -31,7 +31,7 @@ kotlin {
         }
         val androidMain by getting {
             dependencies {
-                implementation("androidx.activity:activity-compose:1.3.0-beta02")
+                implementation("androidx.activity:activity-compose:1.4.0")
             }
         }
     }
