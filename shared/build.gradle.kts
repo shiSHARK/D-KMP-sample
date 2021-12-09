@@ -25,15 +25,7 @@ kotlin {
     } else {
         iosX64("ios")
     }
-    jvm("desktop") {
-        compilations.all {
-            kotlinOptions.jvmTarget = "11"
-        }
-    }
-    js("web",IR) {
-        useCommonJs()
-        browser()
-    }
+
     sourceSets {
         all {
             languageSettings.apply {
@@ -73,13 +65,6 @@ kotlin {
                 implementation("com.squareup.sqldelight:sqlite-driver:${Versions.sql_delight}")
             }
         }
-        val desktopMain by getting {
-            dependencies {
-                implementation("io.ktor:ktor-client-apache:${Versions.ktor}")
-                implementation("com.squareup.sqldelight:sqlite-driver:${Versions.sql_delight}")
-            }
-        }
-        val desktopTest by getting
         val iosMain by getting {
             dependencies {
                 implementation("io.ktor:ktor-client-ios:${Versions.ktor}")
@@ -87,12 +72,6 @@ kotlin {
             }
         }
         val iosTest by getting
-        val webMain by getting {
-            dependencies {
-                implementation("io.ktor:ktor-client-js:${Versions.ktor}")
-                implementation("com.squareup.sqldelight:sqljs-driver:${Versions.sql_delight}")
-            }
-        }
     }
 }
 

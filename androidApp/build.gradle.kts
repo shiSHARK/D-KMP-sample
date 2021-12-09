@@ -1,4 +1,3 @@
-import org.jetbrains.compose.compose
 
 group = "eu.baroncelli.dkmpsample"
 version = "1.0-SNAPSHOT"
@@ -6,17 +5,23 @@ version = "1.0-SNAPSHOT"
 plugins {
     id("com.android.application")
     kotlin("android")
-    id("org.jetbrains.compose") version Versions.mppCompose
 }
 
 dependencies {
-    implementation(project(":composables"))
+//    implementation(project(":composables"))
     implementation(project(":shared"))
     implementation("androidx.activity:activity-compose:1.4.0")
     implementation("androidx.lifecycle:lifecycle-process:2.4.0")
     implementation("androidx.appcompat:appcompat:1.4.0")
     coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:1.1.5")
-    implementation(compose.runtime)
+
+    
+//    implementation(compose.runtime)
+    implementation("androidx.compose.foundation:foundation:${Versions.compose}")
+//    implementation(compose.ui)
+    implementation("androidx.compose.ui:ui-tooling:${Versions.compose}")
+    implementation("androidx.compose.material:material:${Versions.compose}")
+    implementation("androidx.compose.material:material-icons-core:${Versions.compose}")
 }
 
 android {
@@ -55,5 +60,9 @@ android {
     }
     buildFeatures {
         compose = true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = Versions.compose
     }
 }
