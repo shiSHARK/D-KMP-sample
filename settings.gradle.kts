@@ -7,7 +7,7 @@ pluginManagement {
     }
 }
 
-rootProject.name = "D-KMP-sample"
+rootProject.name = "fieldontrack-multiplatform-mobile"
 
 include(":androidApp")
 include(":entities")

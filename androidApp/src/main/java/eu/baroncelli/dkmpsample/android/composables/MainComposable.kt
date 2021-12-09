@@ -9,7 +9,7 @@ import com.fieldontrack.kmm.shared.viewmodel.DKMPViewModel
 @Composable
 fun MainComposable(model: DKMPViewModel) {
     val appState by model.stateFlow.collectAsState()
-    println("D-KMP-SAMPLE: recomposition Index: "+appState.recompositionIndex.toString())
+    println("FOT-KMM: recomposition Index: "+appState.recompositionIndex.toString())
     val dkmpNav = appState.getNavigation(model)
     dkmpNav.Router()
 }

@@ -24,7 +24,7 @@ fun Navigation.Router() {
 
     screenStatesToRemove.forEach {
         screenUIsStateHolder.removeState(it.URI)
-        println("D-KMP: removed UI screen "+it.URI)
+        println("FOT-KMM: removed UI screen "+it.URI)
     }
 
     if (!only1ScreenInBackstack) {

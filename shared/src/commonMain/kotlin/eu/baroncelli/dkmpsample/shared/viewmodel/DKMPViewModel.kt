@@ -6,7 +6,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlin.native.concurrent.ThreadLocal
 
 @ThreadLocal
-val debugLogger by lazy { DebugLogger("D-KMP SAMPLE") }
+val debugLogger by lazy { DebugLogger("FOT KMM") }
 
 
 class DKMPViewModel (repo: Repository) {
