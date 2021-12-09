@@ -35,6 +35,9 @@ kotlin {
         }
         val commonMain by getting {
             dependencies {
+                api(project(":entities"))
+                implementation(project(":persistence"))
+                api(project(":coreinterfaces"))
                 implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.2.1")
                 implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0-native-mt")
                 implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.2.1")
@@ -55,23 +58,35 @@ kotlin {
         val androidMain by getting {
             dependencies {
                 implementation("io.ktor:ktor-client-android:${Versions.ktor}")
-                implementation("com.squareup.sqldelight:android-driver:${Versions.sql_delight}")
             }
         }
         val androidTest by getting {
             dependencies {
                 implementation(kotlin("test-junit"))
                 implementation("junit:junit:4.13.2")
-                implementation("com.squareup.sqldelight:sqlite-driver:${Versions.sql_delight}")
             }
         }
         val iosMain by getting {
             dependencies {
                 implementation("io.ktor:ktor-client-ios:${Versions.ktor}")
-                implementation("com.squareup.sqldelight:native-driver:${Versions.sql_delight}")
             }
         }
         val iosTest by getting
+    }
+
+    // Configure the framework which is generated internally by cocoapods plugin
+    targets.withType<KotlinNativeTarget> {
+        binaries.withType<org.jetbrains.kotlin.gradle.plugin.mpp.Framework> {
+            isStatic = false // SwiftUI preview requires dynamic framework
+            export(project(":entities"))
+//            export(project(":persistence"))
+            export(project(":coreinterfaces"))
+//            export(project(":kmm:core:core-common"))
+//            export(project(":kmm:core:core-ios"))
+//            export(project(":kmm:todos:todos-list-api"))
+//            export(project(":kmm:todos:todos-count-api"))
+            transitiveExport = true
+        }
     }
 }
 
@@ -87,13 +102,6 @@ android {
         getByName("release") {
             isMinifyEnabled = true
         }
-    }
-}
-
-sqldelight {
-    database("LocalDb") {
-        packageName = "mylocal.db"
-        sourceFolders = listOf("kotlin")
     }
 }
 

@@ -10,4 +10,7 @@ pluginManagement {
 rootProject.name = "D-KMP-sample"
 
 include(":androidApp")
+include(":entities")
+include(":persistence")
+include(":coreinterfaces")
 include(":shared")
