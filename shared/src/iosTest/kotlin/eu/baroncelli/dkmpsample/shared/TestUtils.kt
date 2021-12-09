@@ -8,6 +8,7 @@ import kotlinx.coroutines.runBlocking
 import kotlin.coroutines.CoroutineContext
 import com.squareup.sqldelight.drivers.native.NativeSqliteDriver
 import eu.baroncelli.dkmpsample.persistence.localdb.createIosDB
+import eu.baroncelli.dkmpsample.shared.datalayer.sources.localsettings.UserSettingsImpl
 import mylocal.db.LocalDb
 
 actual val testCoroutineContext: CoroutineContext =
@@ -18,5 +19,5 @@ actual fun runBlockingTest(block: suspend CoroutineScope.() -> Unit) =
 
 actual fun getTestRepository() : Repository {
     val db = createIosDB()
-    return Repository(db, MockSettings(), false)
+    return Repository(db, UserSettingsImpl( MockSettings()), false)
 }

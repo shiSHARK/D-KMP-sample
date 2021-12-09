@@ -3,6 +3,7 @@ package eu.baroncelli.dkmpsample.shared
 import com.russhwolf.settings.MockSettings
 import eu.baroncelli.dkmpsample.persistence.localdb.createAndroidTestDB
 import eu.baroncelli.dkmpsample.shared.datalayer.Repository
+import eu.baroncelli.dkmpsample.shared.datalayer.sources.localsettings.UserSettingsImpl
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.asCoroutineDispatcher
 import kotlinx.coroutines.runBlocking
@@ -16,5 +17,5 @@ actual fun runBlockingTest(block: suspend CoroutineScope.() -> Unit) =
 
 actual fun getTestRepository() : Repository {
     val db = createAndroidTestDB()
-    return Repository(db, MockSettings(), false)
+    return Repository(db, UserSettingsImpl( MockSettings()), false)
 }
