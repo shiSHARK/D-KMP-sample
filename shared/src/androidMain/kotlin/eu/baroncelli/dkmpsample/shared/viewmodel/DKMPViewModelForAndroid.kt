@@ -1,9 +1,9 @@
-package eu.baroncelli.dkmpsample.shared.viewmodel
+package com.fieldontrack.kmm.shared.viewmodel
 
 import android.content.Context
-import eu.baroncelli.dkmpsample.persistence.localdb.createAndroidDB
-import eu.baroncelli.dkmpsample.shared.datalayer.Repository
-import eu.baroncelli.dkmpsample.shared.datalayer.sources.localsettings.UserSettingsImpl
+import com.fieldontrack.kmm.persistence.localdb.createAndroidDB
+import com.fieldontrack.kmm.shared.datalayer.Repository
+import com.fieldontrack.kmm.shared.datalayer.sources.localsettings.UserSettingsImpl
 
 
 fun DKMPViewModel.Factory.getAndroidInstance(context: Context): DKMPViewModel {

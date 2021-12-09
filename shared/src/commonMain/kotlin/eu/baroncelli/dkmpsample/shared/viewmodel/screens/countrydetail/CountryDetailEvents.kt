@@ -1,4 +1,4 @@
-package eu.baroncelli.dkmpsample.shared.viewmodel.screens.countrydetail
+package com.fieldontrack.kmm.shared.viewmodel.screens.countrydetail
 
 
 /********** NO EVENT FUNCTION IS DEFINED ON THIS SCREEN **********/

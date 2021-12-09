@@ -1,8 +1,8 @@
-package eu.baroncelli.dkmpsample.shared.viewmodel.screens.countrieslist
+package com.fieldontrack.kmm.shared.viewmodel.screens.countrieslist
 
-import eu.baroncelli.dkmpsample.shared.datalayer.objects.CountryListData
-import eu.baroncelli.dkmpsample.shared.viewmodel.*
-import eu.baroncelli.dkmpsample.shared.viewmodel.utils.toPercentageString
+import com.fieldontrack.kmm.shared.datalayer.objects.CountryListData
+import com.fieldontrack.kmm.shared.viewmodel.*
+import com.fieldontrack.kmm.shared.viewmodel.utils.toPercentageString
 import kotlinx.serialization.Serializable
 
 // here is the data class defining the state for this screen

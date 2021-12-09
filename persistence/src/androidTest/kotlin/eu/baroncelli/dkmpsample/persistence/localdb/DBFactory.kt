@@ -1,7 +1,7 @@
-package eu.baroncelli.dkmpsample.persistence.localdb
+package com.fieldontrack.kmm.persistence.localdb
 
 import com.squareup.sqldelight.sqlite.driver.JdbcSqliteDriver
-import eu.baroncelli.dkmpsample.coreinterfaces.DataBase
+import com.fieldontrack.kmm.coreinterfaces.DataBase
 import mylocal.db.LocalDb
 
 fun createAndroidTestDB(): DataBase {

@@ -1,15 +1,15 @@
-package eu.baroncelli.dkmpsample.android.composables.navigation
+package com.fieldontrack.kmm.android.composables.navigation
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.runtime.Composable
-import eu.baroncelli.dkmpsample.android.composables.screens.countrydetail.CountryDetailScreen
-import eu.baroncelli.dkmpsample.android.composables.screens.countrieslist.CountriesListScreen
-import eu.baroncelli.dkmpsample.android.composables.screens.countrieslist.CountriesListTwoPaneDefaultDetail
-import eu.baroncelli.dkmpsample.shared.viewmodel.Navigation
-import eu.baroncelli.dkmpsample.shared.viewmodel.ScreenIdentifier
-import eu.baroncelli.dkmpsample.shared.viewmodel.screens.Screen.*
-import eu.baroncelli.dkmpsample.shared.viewmodel.screens.countrieslist.selectFavorite
-import eu.baroncelli.dkmpsample.shared.viewmodel.screens.countrydetail.CountryDetailParams
+import com.fieldontrack.kmm.android.composables.screens.countrydetail.CountryDetailScreen
+import com.fieldontrack.kmm.android.composables.screens.countrieslist.CountriesListScreen
+import com.fieldontrack.kmm.android.composables.screens.countrieslist.CountriesListTwoPaneDefaultDetail
+import com.fieldontrack.kmm.shared.viewmodel.Navigation
+import com.fieldontrack.kmm.shared.viewmodel.ScreenIdentifier
+import com.fieldontrack.kmm.shared.viewmodel.screens.Screen.*
+import com.fieldontrack.kmm.shared.viewmodel.screens.countrieslist.selectFavorite
+import com.fieldontrack.kmm.shared.viewmodel.screens.countrydetail.CountryDetailParams
 
 
 

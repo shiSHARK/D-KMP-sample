@@ -1,11 +1,11 @@
-package eu.baroncelli.dkmpsample.shared.datalayer.functions
+package com.fieldontrack.kmm.shared.datalayer.functions
 
-import eu.baroncelli.dkmpsample.shared.datalayer.Repository
-import eu.baroncelli.dkmpsample.shared.datalayer.sources.localdb.countries.getCountriesList
-import eu.baroncelli.dkmpsample.shared.datalayer.sources.localdb.countries.setCountriesList
-import eu.baroncelli.dkmpsample.shared.datalayer.sources.webservices.apis.fetchCountriesList
-import eu.baroncelli.dkmpsample.shared.viewmodel.debugLogger
-import eu.baroncelli.dkmpsample.shared.viewmodel.screens.countrieslist.CountriesListItem
+import com.fieldontrack.kmm.shared.datalayer.Repository
+import com.fieldontrack.kmm.shared.datalayer.sources.localdb.countries.getCountriesList
+import com.fieldontrack.kmm.shared.datalayer.sources.localdb.countries.setCountriesList
+import com.fieldontrack.kmm.shared.datalayer.sources.webservices.apis.fetchCountriesList
+import com.fieldontrack.kmm.shared.viewmodel.debugLogger
+import com.fieldontrack.kmm.shared.viewmodel.screens.countrieslist.CountriesListItem
 import kotlinx.datetime.Clock
 
 suspend fun Repository.getCountriesListData(): List<CountriesListItem> = withRepoContext {

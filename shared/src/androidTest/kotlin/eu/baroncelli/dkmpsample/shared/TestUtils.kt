@@ -1,9 +1,9 @@
-package eu.baroncelli.dkmpsample.shared
+package com.fieldontrack.kmm.shared
 
 import com.russhwolf.settings.MockSettings
-import eu.baroncelli.dkmpsample.persistence.localdb.createAndroidTestDB
-import eu.baroncelli.dkmpsample.shared.datalayer.Repository
-import eu.baroncelli.dkmpsample.shared.datalayer.sources.localsettings.UserSettingsImpl
+import com.fieldontrack.kmm.persistence.localdb.createAndroidTestDB
+import com.fieldontrack.kmm.shared.datalayer.Repository
+import com.fieldontrack.kmm.shared.datalayer.sources.localsettings.UserSettingsImpl
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.asCoroutineDispatcher
 import kotlinx.coroutines.runBlocking

@@ -1,7 +1,7 @@
-package eu.baroncelli.dkmpsample.persistence.localdb
+package com.fieldontrack.kmm.persistence.localdb
 
-import eu.baroncelli.dkmpsample.coreinterfaces.DataBase
-import eu.baroncelli.dkmpsample.shared.datalayer.objects.CountryListData
+import com.fieldontrack.kmm.coreinterfaces.DataBase
+import com.fieldontrack.kmm.shared.datalayer.objects.CountryListData
 import mylocal.db.LocalDb
 
 class LocalDataBase(private val localDb: LocalDb) : DataBase {

@@ -1,4 +1,4 @@
-package eu.baroncelli.dkmpsample.shared.viewmodel
+package com.fieldontrack.kmm.shared.viewmodel
 
 class StateProvider (val stateManager : StateManager) {
 

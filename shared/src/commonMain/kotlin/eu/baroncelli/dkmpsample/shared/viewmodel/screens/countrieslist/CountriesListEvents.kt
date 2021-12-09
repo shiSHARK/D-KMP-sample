@@ -1,7 +1,7 @@
-package eu.baroncelli.dkmpsample.shared.viewmodel.screens.countrieslist
+package com.fieldontrack.kmm.shared.viewmodel.screens.countrieslist
 
-import eu.baroncelli.dkmpsample.shared.datalayer.functions.getFavoriteCountriesMap
-import eu.baroncelli.dkmpsample.shared.viewmodel.Events
+import com.fieldontrack.kmm.shared.datalayer.functions.getFavoriteCountriesMap
+import com.fieldontrack.kmm.shared.viewmodel.Events
 
 
 /********** EVENT functions, called directly by the UI layer **********/

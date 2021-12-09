@@ -1,11 +1,11 @@
-package eu.baroncelli.dkmpsample.shared.viewmodel.screens.countrieslist
+package com.fieldontrack.kmm.shared.viewmodel.screens.countrieslist
 
-import eu.baroncelli.dkmpsample.shared.datalayer.functions.getCountriesListData
-import eu.baroncelli.dkmpsample.shared.datalayer.functions.getFavoriteCountriesMap
-import eu.baroncelli.dkmpsample.shared.viewmodel.Navigation
-import eu.baroncelli.dkmpsample.shared.viewmodel.ScreenParams
-import eu.baroncelli.dkmpsample.shared.viewmodel.debugLogger
-import eu.baroncelli.dkmpsample.shared.viewmodel.screens.ScreenInitSettings
+import com.fieldontrack.kmm.shared.datalayer.functions.getCountriesListData
+import com.fieldontrack.kmm.shared.datalayer.functions.getFavoriteCountriesMap
+import com.fieldontrack.kmm.shared.viewmodel.Navigation
+import com.fieldontrack.kmm.shared.viewmodel.ScreenParams
+import com.fieldontrack.kmm.shared.viewmodel.debugLogger
+import com.fieldontrack.kmm.shared.viewmodel.screens.ScreenInitSettings
 import kotlinx.serialization.Serializable
 
 // INIZIALIZATION settings for this screen

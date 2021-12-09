@@ -1,12 +1,12 @@
-package eu.baroncelli.dkmpsample.android.composables.navigation
+package com.fieldontrack.kmm.android.composables.navigation
 
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.saveable.rememberSaveableStateHolder
 import androidx.compose.ui.unit.dp
-import eu.baroncelli.dkmpsample.android.composables.navigation.templates.OnePane
-import eu.baroncelli.dkmpsample.android.composables.navigation.templates.TwoPane
-import eu.baroncelli.dkmpsample.shared.viewmodel.*
+import com.fieldontrack.kmm.android.composables.navigation.templates.OnePane
+import com.fieldontrack.kmm.android.composables.navigation.templates.TwoPane
+import com.fieldontrack.kmm.shared.viewmodel.*
 
 @Composable
 fun Navigation.Router() {

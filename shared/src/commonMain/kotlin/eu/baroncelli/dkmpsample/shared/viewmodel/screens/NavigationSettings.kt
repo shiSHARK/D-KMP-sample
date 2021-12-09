@@ -1,9 +1,9 @@
-package eu.baroncelli.dkmpsample.shared.viewmodel.screens
+package com.fieldontrack.kmm.shared.viewmodel.screens
 
-import eu.baroncelli.dkmpsample.shared.viewmodel.ScreenIdentifier
-import eu.baroncelli.dkmpsample.shared.viewmodel.screens.Screen.*
-import eu.baroncelli.dkmpsample.shared.viewmodel.screens.countrieslist.CountriesListParams
-import eu.baroncelli.dkmpsample.shared.viewmodel.screens.countrieslist.CountriesListType.*
+import com.fieldontrack.kmm.shared.viewmodel.ScreenIdentifier
+import com.fieldontrack.kmm.shared.viewmodel.screens.Screen.*
+import com.fieldontrack.kmm.shared.viewmodel.screens.countrieslist.CountriesListParams
+import com.fieldontrack.kmm.shared.viewmodel.screens.countrieslist.CountriesListType.*
 
 
 // CONFIGURATION SETTINGS

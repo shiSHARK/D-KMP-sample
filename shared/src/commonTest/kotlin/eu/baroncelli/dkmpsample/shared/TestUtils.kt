@@ -1,6 +1,6 @@
-package eu.baroncelli.dkmpsample.shared
+package com.fieldontrack.kmm.shared
 
-import eu.baroncelli.dkmpsample.shared.datalayer.Repository
+import com.fieldontrack.kmm.shared.datalayer.Repository
 import kotlinx.coroutines.CoroutineScope
 import kotlin.coroutines.CoroutineContext
 

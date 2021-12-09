@@ -1,4 +1,4 @@
-package eu.baroncelli.dkmpsample.android.composables.styling
+package com.fieldontrack.kmm.android.composables.styling
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme

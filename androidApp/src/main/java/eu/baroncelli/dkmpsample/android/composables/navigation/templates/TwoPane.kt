@@ -1,4 +1,4 @@
-package eu.baroncelli.dkmpsample.android.composables.navigation.templates
+package com.fieldontrack.kmm.android.composables.navigation.templates
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Scaffold
@@ -6,11 +6,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.saveable.SaveableStateHolder
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import eu.baroncelli.dkmpsample.android.composables.navigation.ScreenPicker
-import eu.baroncelli.dkmpsample.android.composables.navigation.TwoPaneDefaultDetail
-import eu.baroncelli.dkmpsample.android.composables.navigation.bars.Level1NavigationRail
-import eu.baroncelli.dkmpsample.android.composables.navigation.bars.TopBar
-import eu.baroncelli.dkmpsample.shared.viewmodel.Navigation
+import com.fieldontrack.kmm.android.composables.navigation.ScreenPicker
+import com.fieldontrack.kmm.android.composables.navigation.TwoPaneDefaultDetail
+import com.fieldontrack.kmm.android.composables.navigation.bars.Level1NavigationRail
+import com.fieldontrack.kmm.android.composables.navigation.bars.TopBar
+import com.fieldontrack.kmm.shared.viewmodel.Navigation
 
 @Composable
 fun Navigation.TwoPane(

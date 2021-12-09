@@ -1,4 +1,4 @@
-package eu.baroncelli.dkmpsample.shared.viewmodel.utils
+package com.fieldontrack.kmm.shared.viewmodel.utils
 
 import kotlin.math.roundToInt
 

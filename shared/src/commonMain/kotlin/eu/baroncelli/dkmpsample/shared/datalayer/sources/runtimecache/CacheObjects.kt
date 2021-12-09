@@ -1,6 +1,6 @@
-package eu.baroncelli.dkmpsample.shared.datalayer.sources.runtimecache
+package com.fieldontrack.kmm.shared.datalayer.sources.runtimecache
 
-import eu.baroncelli.dkmpsample.shared.datalayer.objects.CountryExtraData
+import com.fieldontrack.kmm.shared.datalayer.objects.CountryExtraData
 import kotlin.native.concurrent.ThreadLocal
 
 @ThreadLocal

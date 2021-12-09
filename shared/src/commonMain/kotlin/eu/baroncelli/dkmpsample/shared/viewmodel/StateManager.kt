@@ -1,8 +1,8 @@
-package eu.baroncelli.dkmpsample.shared.viewmodel
+package com.fieldontrack.kmm.shared.viewmodel
 
-import eu.baroncelli.dkmpsample.shared.datalayer.Repository
-import eu.baroncelli.dkmpsample.shared.viewmodel.screens.ScreenInitSettings
-import eu.baroncelli.dkmpsample.shared.viewmodel.screens.navigationSettings
+import com.fieldontrack.kmm.shared.datalayer.Repository
+import com.fieldontrack.kmm.shared.viewmodel.screens.ScreenInitSettings
+import com.fieldontrack.kmm.shared.viewmodel.screens.navigationSettings
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlin.reflect.KClass

@@ -1,4 +1,4 @@
-package eu.baroncelli.dkmpsample.android.composables.screens.countrieslist
+package com.fieldontrack.kmm.android.composables.screens.countrieslist
 
 import androidx.compose.foundation.background
 import androidx.compose.material.Text

@@ -1,5 +1,5 @@
 
-group = "eu.baroncelli.dkmpsample"
+group = "com.fieldontrack.kmm"
 version = "1.0-SNAPSHOT"
 
 plugins {
@@ -15,7 +15,7 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.4.0")
     coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:1.1.5")
 
-    
+
 //    implementation(compose.runtime)
     implementation("androidx.compose.foundation:foundation:${Versions.compose}")
 //    implementation(compose.ui)
@@ -28,7 +28,7 @@ android {
     compileSdk = Versions.compile_sdk
     buildToolsVersion = Versions.build_tools
     defaultConfig {
-        applicationId = "eu.baroncelli.dkmpsample"
+        applicationId = "com.fieldontrack.kmm"
         minSdk = Versions.min_sdk
         targetSdk = Versions.target_sdk
         versionCode = 1

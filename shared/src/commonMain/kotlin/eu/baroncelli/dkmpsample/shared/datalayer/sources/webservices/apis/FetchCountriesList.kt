@@ -1,7 +1,7 @@
-package eu.baroncelli.dkmpsample.shared.datalayer.sources.webservices.apis
+package com.fieldontrack.kmm.shared.datalayer.sources.webservices.apis
 
-import eu.baroncelli.dkmpsample.shared.datalayer.objects.CountryListData
-import eu.baroncelli.dkmpsample.shared.datalayer.sources.webservices.ApiClient
+import com.fieldontrack.kmm.shared.datalayer.objects.CountryListData
+import com.fieldontrack.kmm.shared.datalayer.sources.webservices.ApiClient
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 

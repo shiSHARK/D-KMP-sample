@@ -1,8 +1,8 @@
-package eu.baroncelli.dkmpsample.android.composables.navigation
+package com.fieldontrack.kmm.android.composables.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.activity.compose.BackHandler
-import eu.baroncelli.dkmpsample.shared.viewmodel.Navigation
+import com.fieldontrack.kmm.shared.viewmodel.Navigation
 
 @Composable
 fun Navigation.HandleBackButton() {

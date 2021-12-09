@@ -1,6 +1,6 @@
-package eu.baroncelli.dkmpsample.shared.datalayer.sources.webservices
+package com.fieldontrack.kmm.shared.datalayer.sources.webservices
 
-import eu.baroncelli.dkmpsample.shared.viewmodel.debugLogger
+import com.fieldontrack.kmm.shared.viewmodel.debugLogger
 import io.ktor.client.HttpClient
 import io.ktor.client.features.json.JsonFeature
 import io.ktor.client.features.json.serializer.KotlinxSerializer

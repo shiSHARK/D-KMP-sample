@@ -1,8 +1,8 @@
-package eu.baroncelli.dkmpsample.shared.viewmodel.screens
+package com.fieldontrack.kmm.shared.viewmodel.screens
 
-import eu.baroncelli.dkmpsample.shared.viewmodel.ScreenIdentifier
-import eu.baroncelli.dkmpsample.shared.viewmodel.ScreenState
-import eu.baroncelli.dkmpsample.shared.viewmodel.StateManager
+import com.fieldontrack.kmm.shared.viewmodel.ScreenIdentifier
+import com.fieldontrack.kmm.shared.viewmodel.ScreenState
+import com.fieldontrack.kmm.shared.viewmodel.StateManager
 
 
 /* INITALIZATION BEHAVIOUR (two UI recompositions):

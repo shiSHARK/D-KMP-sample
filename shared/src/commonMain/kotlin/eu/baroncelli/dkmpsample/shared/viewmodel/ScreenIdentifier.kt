@@ -1,8 +1,8 @@
-package eu.baroncelli.dkmpsample.shared.viewmodel
+package com.fieldontrack.kmm.shared.viewmodel
 
-import eu.baroncelli.dkmpsample.shared.viewmodel.screens.Level1Navigation
-import eu.baroncelli.dkmpsample.shared.viewmodel.screens.Screen
-import eu.baroncelli.dkmpsample.shared.viewmodel.screens.ScreenInitSettings
+import com.fieldontrack.kmm.shared.viewmodel.screens.Level1Navigation
+import com.fieldontrack.kmm.shared.viewmodel.screens.Screen
+import com.fieldontrack.kmm.shared.viewmodel.screens.ScreenInitSettings
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
 

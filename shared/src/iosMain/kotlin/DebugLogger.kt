@@ -1,4 +1,4 @@
-package eu.baroncelli.dkmpsample.shared
+package com.fieldontrack.kmm.shared
 
 import platform.Foundation.NSLog
 

@@ -1,8 +1,8 @@
-package eu.baroncelli.dkmpsample.shared.viewmodel
+package com.fieldontrack.kmm.shared.viewmodel
 
-import eu.baroncelli.dkmpsample.persistence.localdb.createIosDB
-import eu.baroncelli.dkmpsample.shared.datalayer.Repository
-import eu.baroncelli.dkmpsample.shared.datalayer.sources.localsettings.UserSettingsImpl
+import com.fieldontrack.kmm.persistence.localdb.createIosDB
+import com.fieldontrack.kmm.shared.datalayer.Repository
+import com.fieldontrack.kmm.shared.datalayer.sources.localsettings.UserSettingsImpl
 import io.ktor.utils.io.core.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

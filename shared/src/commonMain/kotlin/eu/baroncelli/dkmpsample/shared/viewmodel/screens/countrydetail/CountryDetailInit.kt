@@ -1,9 +1,9 @@
-package eu.baroncelli.dkmpsample.shared.viewmodel.screens.countrydetail
+package com.fieldontrack.kmm.shared.viewmodel.screens.countrydetail
 
-import eu.baroncelli.dkmpsample.shared.datalayer.functions.getCountryInfo
-import eu.baroncelli.dkmpsample.shared.viewmodel.Navigation
-import eu.baroncelli.dkmpsample.shared.viewmodel.ScreenParams
-import eu.baroncelli.dkmpsample.shared.viewmodel.screens.ScreenInitSettings
+import com.fieldontrack.kmm.shared.datalayer.functions.getCountryInfo
+import com.fieldontrack.kmm.shared.viewmodel.Navigation
+import com.fieldontrack.kmm.shared.viewmodel.ScreenParams
+import com.fieldontrack.kmm.shared.viewmodel.screens.ScreenInitSettings
 import kotlinx.serialization.Serializable
 
 

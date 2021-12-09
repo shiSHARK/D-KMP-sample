@@ -1,4 +1,4 @@
-package eu.baroncelli.dkmpsample.android.composables.navigation.bars
+package com.fieldontrack.kmm.android.composables.navigation.bars
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material.*

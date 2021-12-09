@@ -1,8 +1,8 @@
-package eu.baroncelli.dkmpsample.persistence.localdb
+package com.fieldontrack.kmm.persistence.localdb
 
 import android.content.Context
 import com.squareup.sqldelight.android.AndroidSqliteDriver
-import eu.baroncelli.dkmpsample.coreinterfaces.DataBase
+import com.fieldontrack.kmm.coreinterfaces.DataBase
 import mylocal.db.LocalDb
 
 

@@ -1,9 +1,9 @@
-package eu.baroncelli.dkmpsample.shared.viewmodel.screens
+package com.fieldontrack.kmm.shared.viewmodel.screens
 
-import eu.baroncelli.dkmpsample.shared.viewmodel.Navigation
-import eu.baroncelli.dkmpsample.shared.viewmodel.ScreenIdentifier
-import eu.baroncelli.dkmpsample.shared.viewmodel.screens.countrieslist.initCountriesList
-import eu.baroncelli.dkmpsample.shared.viewmodel.screens.countrydetail.initCountryDetail
+import com.fieldontrack.kmm.shared.viewmodel.Navigation
+import com.fieldontrack.kmm.shared.viewmodel.ScreenIdentifier
+import com.fieldontrack.kmm.shared.viewmodel.screens.countrieslist.initCountriesList
+import com.fieldontrack.kmm.shared.viewmodel.screens.countrydetail.initCountryDetail
 
 
 // DEFINITION OF ALL SCREENS IN THE APP

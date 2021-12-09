@@ -1,12 +1,12 @@
-package eu.baroncelli.dkmpsample.android.composables.navigation.templates
+package com.fieldontrack.kmm.android.composables.navigation.templates
 
 import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.saveable.SaveableStateHolder
-import eu.baroncelli.dkmpsample.android.composables.navigation.ScreenPicker
-import eu.baroncelli.dkmpsample.android.composables.navigation.bars.Level1BottomBar
-import eu.baroncelli.dkmpsample.android.composables.navigation.bars.TopBar
-import eu.baroncelli.dkmpsample.shared.viewmodel.Navigation
+import com.fieldontrack.kmm.android.composables.navigation.ScreenPicker
+import com.fieldontrack.kmm.android.composables.navigation.bars.Level1BottomBar
+import com.fieldontrack.kmm.android.composables.navigation.bars.TopBar
+import com.fieldontrack.kmm.shared.viewmodel.Navigation
 
 @Composable
 fun Navigation.OnePane(

@@ -1,12 +1,12 @@
-package eu.baroncelli.dkmpsample.shared.viewmodel
+package com.fieldontrack.kmm.shared.viewmodel
 
-import eu.baroncelli.dkmpsample.shared.datalayer.objects.CountryExtraData
-import eu.baroncelli.dkmpsample.shared.getTestRepository
-import eu.baroncelli.dkmpsample.shared.viewmodel.screens.Screen.*
-import eu.baroncelli.dkmpsample.shared.viewmodel.screens.countrydetail.CountryDetailState
-import eu.baroncelli.dkmpsample.shared.viewmodel.screens.countrieslist.*
-import eu.baroncelli.dkmpsample.shared.viewmodel.screens.countrydetail.CountryDetailParams
-import eu.baroncelli.dkmpsample.shared.viewmodel.screens.countrydetail.CountryInfo
+import com.fieldontrack.kmm.shared.datalayer.objects.CountryExtraData
+import com.fieldontrack.kmm.shared.getTestRepository
+import com.fieldontrack.kmm.shared.viewmodel.screens.Screen.*
+import com.fieldontrack.kmm.shared.viewmodel.screens.countrydetail.CountryDetailState
+import com.fieldontrack.kmm.shared.viewmodel.screens.countrieslist.*
+import com.fieldontrack.kmm.shared.viewmodel.screens.countrydetail.CountryDetailParams
+import com.fieldontrack.kmm.shared.viewmodel.screens.countrydetail.CountryInfo
 import kotlin.test.Test
 import kotlin.test.assertTrue
 

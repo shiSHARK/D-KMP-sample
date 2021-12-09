@@ -1,4 +1,4 @@
-package eu.baroncelli.dkmpsample.shared
+package com.fieldontrack.kmm.shared
 
 expect class DebugLogger (tagString : String) {
     val tag : String

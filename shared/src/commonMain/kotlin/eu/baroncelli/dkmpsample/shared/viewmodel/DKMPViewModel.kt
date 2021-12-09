@@ -1,7 +1,7 @@
-package eu.baroncelli.dkmpsample.shared.viewmodel
+package com.fieldontrack.kmm.shared.viewmodel
 
-import eu.baroncelli.dkmpsample.shared.DebugLogger
-import eu.baroncelli.dkmpsample.shared.datalayer.Repository
+import com.fieldontrack.kmm.shared.DebugLogger
+import com.fieldontrack.kmm.shared.datalayer.Repository
 import kotlinx.coroutines.flow.StateFlow
 import kotlin.native.concurrent.ThreadLocal
 

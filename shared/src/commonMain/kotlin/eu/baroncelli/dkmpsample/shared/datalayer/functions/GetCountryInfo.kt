@@ -1,9 +1,9 @@
-package eu.baroncelli.dkmpsample.shared.datalayer.functions
+package com.fieldontrack.kmm.shared.datalayer.functions
 
-import eu.baroncelli.dkmpsample.shared.datalayer.Repository
-import eu.baroncelli.dkmpsample.shared.datalayer.sources.localdb.countries.getCountriesList
-import eu.baroncelli.dkmpsample.shared.datalayer.sources.webservices.apis.fetchCountryExtraData
-import eu.baroncelli.dkmpsample.shared.viewmodel.screens.countrydetail.CountryInfo
+import com.fieldontrack.kmm.shared.datalayer.Repository
+import com.fieldontrack.kmm.shared.datalayer.sources.localdb.countries.getCountriesList
+import com.fieldontrack.kmm.shared.datalayer.sources.webservices.apis.fetchCountryExtraData
+import com.fieldontrack.kmm.shared.viewmodel.screens.countrydetail.CountryInfo
 
 suspend fun Repository.getCountryInfo(country: String): CountryInfo = withRepoContext {
 

@@ -1,4 +1,4 @@
-package eu.baroncelli.dkmpsample.android.composables.navigation.bars
+package com.fieldontrack.kmm.android.composables.navigation.bars
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -14,9 +14,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import eu.baroncelli.dkmpsample.shared.viewmodel.Navigation
-import eu.baroncelli.dkmpsample.shared.viewmodel.ScreenIdentifier
-import eu.baroncelli.dkmpsample.shared.viewmodel.screens.Level1Navigation
+import com.fieldontrack.kmm.shared.viewmodel.Navigation
+import com.fieldontrack.kmm.shared.viewmodel.ScreenIdentifier
+import com.fieldontrack.kmm.shared.viewmodel.screens.Level1Navigation
 
 
 // this is the left vertical navigation bar for 2-Pane visualization

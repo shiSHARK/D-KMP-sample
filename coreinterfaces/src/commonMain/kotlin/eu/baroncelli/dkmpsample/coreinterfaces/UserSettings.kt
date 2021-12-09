@@ -1,4 +1,4 @@
-package eu.baroncelli.dkmpsample.coreinterfaces
+package com.fieldontrack.kmm.coreinterfaces
 
 interface UserSettings {
     var listCacheTimestamp: Long

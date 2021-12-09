@@ -1,9 +1,9 @@
-package eu.baroncelli.dkmpsample.shared.datalayer.sources.localsettings
+package com.fieldontrack.kmm.shared.datalayer.sources.localsettings
 
 import com.russhwolf.settings.Settings
 import com.russhwolf.settings.long
 import com.russhwolf.settings.string
-import eu.baroncelli.dkmpsample.coreinterfaces.UserSettings
+import com.fieldontrack.kmm.coreinterfaces.UserSettings
 
 class UserSettingsImpl(s: Settings = Settings()) : UserSettings {
 

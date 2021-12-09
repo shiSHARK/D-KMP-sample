@@ -1,10 +1,10 @@
-package eu.baroncelli.dkmpsample.android
+package com.fieldontrack.kmm.android
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import eu.baroncelli.dkmpsample.android.composables.MainComposable
-import eu.baroncelli.dkmpsample.android.composables.styling.MyMaterialTheme
+import com.fieldontrack.kmm.android.composables.MainComposable
+import com.fieldontrack.kmm.android.composables.styling.MyMaterialTheme
 
 
 class MainActivity : ComponentActivity() {

@@ -1,6 +1,6 @@
-package eu.baroncelli.dkmpsample.shared.datalayer.sources.localdb.countries
+package com.fieldontrack.kmm.shared.datalayer.sources.localdb.countries
 
-import eu.baroncelli.dkmpsample.shared.datalayer.objects.CountryListData
+import com.fieldontrack.kmm.shared.datalayer.objects.CountryListData
 import mylocal.db.LocalDb
 
 fun LocalDb.getCountriesList() : List<CountryListData> {

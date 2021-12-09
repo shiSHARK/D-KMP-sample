@@ -1,4 +1,4 @@
-package eu.baroncelli.dkmpsample.shared
+package com.fieldontrack.kmm.shared
 
 actual class DebugLogger actual constructor(tagString : String) {
     actual val tag = tagString

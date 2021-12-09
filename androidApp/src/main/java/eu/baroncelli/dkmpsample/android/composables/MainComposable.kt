@@ -1,10 +1,10 @@
-package eu.baroncelli.dkmpsample.android.composables
+package com.fieldontrack.kmm.android.composables
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import eu.baroncelli.dkmpsample.android.composables.navigation.Router
-import eu.baroncelli.dkmpsample.shared.viewmodel.DKMPViewModel
+import com.fieldontrack.kmm.android.composables.navigation.Router
+import com.fieldontrack.kmm.shared.viewmodel.DKMPViewModel
 
 @Composable
 fun MainComposable(model: DKMPViewModel) {

@@ -1,4 +1,4 @@
-group = "eu.baroncelli.dkmpsample"
+group = "com.fieldontrack.kmm"
 version = "1.0-SNAPSHOT"
 
 

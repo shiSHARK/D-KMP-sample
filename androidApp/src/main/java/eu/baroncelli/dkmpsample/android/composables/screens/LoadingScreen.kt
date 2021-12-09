@@ -1,4 +1,4 @@
-package eu.baroncelli.dkmpsample.android.composables.screens
+package com.fieldontrack.kmm.android.composables.screens
 
 import androidx.compose.material.Text
 import androidx.compose.foundation.layout.*

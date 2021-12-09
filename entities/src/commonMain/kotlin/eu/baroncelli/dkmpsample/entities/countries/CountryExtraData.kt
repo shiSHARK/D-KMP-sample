@@ -1,4 +1,4 @@
-package eu.baroncelli.dkmpsample.shared.datalayer.objects
+package com.fieldontrack.kmm.shared.datalayer.objects
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

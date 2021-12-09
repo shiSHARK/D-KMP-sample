@@ -1,6 +1,6 @@
-package eu.baroncelli.dkmpsample.coreinterfaces
+package com.fieldontrack.kmm.coreinterfaces
 
-import eu.baroncelli.dkmpsample.shared.datalayer.objects.CountryListData
+import com.fieldontrack.kmm.shared.datalayer.objects.CountryListData
 
 interface DataBase : CountriesRecords {
 }

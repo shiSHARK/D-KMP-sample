@@ -1,12 +1,12 @@
-package eu.baroncelli.dkmpsample.android
+package com.fieldontrack.kmm.android
 
 import android.app.Application
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.OnLifecycleEvent
 import androidx.lifecycle.ProcessLifecycleOwner
-import eu.baroncelli.dkmpsample.shared.viewmodel.DKMPViewModel
-import eu.baroncelli.dkmpsample.shared.viewmodel.getAndroidInstance
+import com.fieldontrack.kmm.shared.viewmodel.DKMPViewModel
+import com.fieldontrack.kmm.shared.viewmodel.getAndroidInstance
 
 class DKMPApp : Application() {
 

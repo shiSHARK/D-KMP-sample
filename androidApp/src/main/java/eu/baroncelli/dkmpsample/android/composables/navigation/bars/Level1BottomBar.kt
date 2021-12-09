@@ -1,4 +1,4 @@
-package eu.baroncelli.dkmpsample.android.composables.navigation.bars
+package com.fieldontrack.kmm.android.composables.navigation.bars
 
 import androidx.compose.material.Icon
 import androidx.compose.material.Text
@@ -9,9 +9,9 @@ import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.unit.sp
-import eu.baroncelli.dkmpsample.shared.viewmodel.Navigation
-import eu.baroncelli.dkmpsample.shared.viewmodel.ScreenIdentifier
-import eu.baroncelli.dkmpsample.shared.viewmodel.screens.Level1Navigation
+import com.fieldontrack.kmm.shared.viewmodel.Navigation
+import com.fieldontrack.kmm.shared.viewmodel.ScreenIdentifier
+import com.fieldontrack.kmm.shared.viewmodel.screens.Level1Navigation
 
 
 // this is the bottom horizontal navigation bar for 1-Pane visualization

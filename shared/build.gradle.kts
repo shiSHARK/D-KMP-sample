@@ -1,6 +1,6 @@
 import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
 
-group = "eu.baroncelli.dkmpsample"
+group = "com.fieldontrack.kmm"
 version = "1.0-SNAPSHOT"
 
 plugins {
