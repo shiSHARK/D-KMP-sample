@@ -254,7 +254,7 @@ class StateManager(repo: Repository, val navigationSettings: NavigationSettings)
 // APPSTATE DATA CLASS DEFINITION
 
 data class AppState(
-    val recompositionIndex: Int = 0,
+    val recompositionIndex: Int = 0,        //TODO maybe change type
 ) {
     fun getNavigation(model: DKMPViewModel): Navigation {
         return model.navigation
