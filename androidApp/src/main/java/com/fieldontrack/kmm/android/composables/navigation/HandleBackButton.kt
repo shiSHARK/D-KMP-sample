@@ -2,7 +2,7 @@ package com.fieldontrack.kmm.android.composables.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.activity.compose.BackHandler
-import com.fieldontrack.kmm.shared.viewmodel.Navigation
+import com.fieldontrack.kmm.featurecore.Navigation
 
 @Composable
 fun Navigation.HandleBackButton() {

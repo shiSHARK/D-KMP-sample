@@ -1,6 +1,6 @@
 package com.fieldontrack.kmm.shared.datalayer.sources.runtimecache
 
-import com.fieldontrack.kmm.shared.datalayer.objects.CountryExtraData
+import com.fieldontrack.kmm.entities.countries.CountryExtraData
 import kotlin.native.concurrent.ThreadLocal
 
 @ThreadLocal

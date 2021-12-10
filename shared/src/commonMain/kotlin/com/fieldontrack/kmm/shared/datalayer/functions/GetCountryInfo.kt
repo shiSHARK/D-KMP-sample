@@ -1,8 +1,6 @@
 package com.fieldontrack.kmm.shared.datalayer.functions
 
-import com.fieldontrack.kmm.shared.datalayer.Repository
-import com.fieldontrack.kmm.shared.datalayer.sources.localdb.countries.getCountriesList
-import com.fieldontrack.kmm.shared.datalayer.sources.webservices.apis.fetchCountryExtraData
+import com.fieldontrack.kmm.featurecore.Repository
 import com.fieldontrack.kmm.shared.viewmodel.screens.countrydetail.CountryInfo
 
 suspend fun Repository.getCountryInfo(country: String): CountryInfo = withRepoContext {
@@ -20,7 +18,7 @@ suspend fun Repository.getCountryInfo(country: String): CountryInfo = withRepoCo
     //  - CountriesListData (read from the localDb)
     //  - CountriesExtraData (read from the runtimeCache)
     CountryInfo(
-        localDb.getCountriesList().first{it.name==country},
+        localDb.getCountriesList().first { it.name == country },
         runtimeCache.countryExtraData[country],
     )
 }

@@ -1,13 +1,19 @@
 package com.fieldontrack.kmm.shared.datalayer.sources.webservices
 
-import com.fieldontrack.kmm.shared.viewmodel.debugLogger
-import io.ktor.client.HttpClient
+import com.fieldontrack.kmm.coreinterfaces.CountriesListResponse
+import com.fieldontrack.kmm.coreinterfaces.CountryExtraResponse
+import com.fieldontrack.kmm.coreinterfaces.NetworkClient
+import com.fieldontrack.kmm.shared.datalayer.sources.webservices.apis.fetchCountriesListAPI
+import com.fieldontrack.kmm.shared.datalayer.sources.webservices.apis.fetchCountryExtraDataAPI
+import com.fieldontrack.kmm.shared.datalayer.sources.webservices.apis.toData
+import com.fieldontrack.kmm.shared.debugLogger
+import io.ktor.client.*
 import io.ktor.client.features.json.JsonFeature
-import io.ktor.client.features.json.serializer.KotlinxSerializer
-import io.ktor.client.request.get
+import io.ktor.client.features.json.serializer.*
+import io.ktor.client.request.*
 import kotlinx.serialization.json.Json
 
-class ApiClient {
+class ApiClient : NetworkClient {
 
     val baseUrl = "https://covidvax.org"
 
@@ -15,8 +21,8 @@ class ApiClient {
         install(JsonFeature) {
             serializer = KotlinxSerializer(Json {
                 useAlternativeNames = false // currently needed as a workaround for this bug:
-                                            // https://github.com/Kotlin/kotlinx.serialization/issues/1450#issuecomment-841214332
-                                            // it should get fixed in kotlinx-serialization-json:1.2.2
+                // https://github.com/Kotlin/kotlinx.serialization/issues/1450#issuecomment-841214332
+                // it should get fixed in kotlinx-serialization-json:1.2.2
                 ignoreUnknownKeys = true
             })
         }
@@ -29,8 +35,8 @@ class ApiClient {
     }
 
 
-    suspend inline fun <reified T:Any> getResponse(endpoint : String): T? {
-        val url = baseUrl+endpoint
+    suspend inline fun <reified T : Any> getResponse(endpoint: String): T? {
+        val url = baseUrl + endpoint
         try {
             // please notice, Ktor Client is switching to a background thread under the hood
             // so the http call doesn't happen on the main thread, even if the coroutine has been launched on Dispatchers.Main
@@ -38,10 +44,16 @@ class ApiClient {
             debugLogger.log("$url API SUCCESS")
             return resp
         } catch (e: Exception) {
-            debugLogger.log("$url API FAILED: "+e.message )
+            debugLogger.log("$url API FAILED: " + e.message)
         }
         return null
     }
 
+
+    override suspend fun fetchCountriesList(): CountriesListResponse? =
+        fetchCountriesListAPI()?.toData()
+
+    override suspend fun fetchCountryExtraData(country: String): CountryExtraResponse? =
+        fetchCountryExtraDataAPI(country)?.toData()
 
 }

@@ -6,7 +6,7 @@ import androidx.compose.runtime.saveable.SaveableStateHolder
 import com.fieldontrack.kmm.android.composables.navigation.ScreenPicker
 import com.fieldontrack.kmm.android.composables.navigation.bars.Level1BottomBar
 import com.fieldontrack.kmm.android.composables.navigation.bars.TopBar
-import com.fieldontrack.kmm.shared.viewmodel.Navigation
+import com.fieldontrack.kmm.featurecore.Navigation
 
 @Composable
 fun Navigation.OnePane(
@@ -19,6 +19,10 @@ fun Navigation.OnePane(
                 ScreenPicker(currentScreenIdentifier)
             }
         },
-        bottomBar = { if (currentScreenIdentifier.screen.navigationLevel == 1) Level1BottomBar(currentScreenIdentifier) }
+        bottomBar = {
+            if (currentScreenIdentifier.screen.navigationLevel == 1) Level1BottomBar(
+                currentScreenIdentifier
+            )
+        }
     )
 }

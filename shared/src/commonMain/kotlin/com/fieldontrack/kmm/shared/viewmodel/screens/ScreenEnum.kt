@@ -1,19 +1,22 @@
 package com.fieldontrack.kmm.shared.viewmodel.screens
 
-import com.fieldontrack.kmm.shared.viewmodel.Navigation
-import com.fieldontrack.kmm.shared.viewmodel.ScreenIdentifier
+import com.fieldontrack.kmm.featurecore.Navigation
+import com.fieldontrack.kmm.featurecore.Screen
+import com.fieldontrack.kmm.featurecore.ScreenIdentifier
+import com.fieldontrack.kmm.featurecore.ScreenInitSettings
 import com.fieldontrack.kmm.shared.viewmodel.screens.countrieslist.initCountriesList
 import com.fieldontrack.kmm.shared.viewmodel.screens.countrydetail.initCountryDetail
 
 
 // DEFINITION OF ALL SCREENS IN THE APP
 
-enum class Screen(
-    val asString: String,
-    val navigationLevel : Int = 1,
-    val initSettings: Navigation.(ScreenIdentifier) -> ScreenInitSettings,
-    val stackableInstances : Boolean = false,
-) {
+enum class ScreenImpl(
+    override val asString: String,
+    override val navigationLevel : Int = 1,
+    override val initSettings: Navigation.(ScreenIdentifier) -> ScreenInitSettings,
+    override val stackableInstances : Boolean = false,
+):Screen {
     CountriesList("countrieslist", 1, { initCountriesList(it.params()) }, true),
     CountryDetail("country", 2, { initCountryDetail(it.params()) }),
 }
+

@@ -1,6 +1,6 @@
 package com.fieldontrack.kmm.coreinterfaces
 
-import com.fieldontrack.kmm.shared.datalayer.objects.CountryListData
+import com.fieldontrack.kmm.entities.countries.CountryListData
 
 interface DataBase : CountriesRecords {
 }

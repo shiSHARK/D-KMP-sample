@@ -10,7 +10,7 @@ import com.fieldontrack.kmm.android.composables.navigation.ScreenPicker
 import com.fieldontrack.kmm.android.composables.navigation.TwoPaneDefaultDetail
 import com.fieldontrack.kmm.android.composables.navigation.bars.Level1NavigationRail
 import com.fieldontrack.kmm.android.composables.navigation.bars.TopBar
-import com.fieldontrack.kmm.shared.viewmodel.Navigation
+import com.fieldontrack.kmm.featurecore.Navigation
 
 @Composable
 fun Navigation.TwoPane(
@@ -21,27 +21,33 @@ fun Navigation.TwoPane(
         topBar = { TopBar(getTitle(currentScreenIdentifier)) },
         content = {
             Row {
-                Column(Modifier
-                    .fillMaxHeight()
-                    .width(80.dp)) {
-                        Level1NavigationRail(selectedTab = navigationLevelsMap[1]!!)
+                Column(
+                    Modifier
+                        .fillMaxHeight()
+                        .width(80.dp)
+                ) {
+                    Level1NavigationRail(selectedTab = navigationLevelsMap[1]!!)
                 }
-                Column(Modifier
-                    .weight(0.4f)) {
-                        saveableStateHolder.SaveableStateProvider(navigationLevelsMap[1]!!.URI) {
-                            ScreenPicker(navigationLevelsMap[1]!!)
-                        }
+                Column(
+                    Modifier
+                        .weight(0.4f)
+                ) {
+                    saveableStateHolder.SaveableStateProvider(navigationLevelsMap[1]!!.URI) {
+                        ScreenPicker(navigationLevelsMap[1]!!)
+                    }
                 }
-                Column(Modifier
-                    .weight(0.6f)
-                    .padding(20.dp)) {
-                        if (navigationLevelsMap[2] == null) {
-                            TwoPaneDefaultDetail(navigationLevelsMap[1]!!)
-                        } else {
-                            saveableStateHolder.SaveableStateProvider(navigationLevelsMap[2]!!.URI) {
-                                ScreenPicker(navigationLevelsMap[2]!!)
-                            }
+                Column(
+                    Modifier
+                        .weight(0.6f)
+                        .padding(20.dp)
+                ) {
+                    if (navigationLevelsMap[2] == null) {
+                        TwoPaneDefaultDetail(navigationLevelsMap[1]!!)
+                    } else {
+                        saveableStateHolder.SaveableStateProvider(navigationLevelsMap[2]!!.URI) {
+                            ScreenPicker(navigationLevelsMap[2]!!)
                         }
+                    }
                 }
             }
         }

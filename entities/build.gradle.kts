@@ -37,7 +37,7 @@ kotlin {
 //        implementation(Deps.kotlinxDateTime)
 //        implementation(Deps.koinCore)
 //        implementation(Deps.kermit)
-                implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.1")
+//                implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.1")
             }
         }
 

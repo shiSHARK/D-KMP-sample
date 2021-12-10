@@ -1,13 +1,14 @@
-package com.fieldontrack.kmm.shared.datalayer.sources.localdb.countries
+package com.fieldontrack.kmm.persistence.localdb.countries
 
-import com.fieldontrack.kmm.shared.datalayer.objects.CountryListData
+import com.fieldontrack.kmm.entities.countries.CountryListData
 import mylocal.db.LocalDb
 
-fun LocalDb.getCountriesList() : List<CountryListData> {
-    return countriesQueries.getCountriesList(mapper = ::CountryListData).executeAsList()
+fun LocalDb.getCountriesList(): List<CountryListData> {
+    return countriesQueries.getCountriesList(mapper = ::CountryListDataDB).executeAsList()
+        .map { it.toData() }
 }
 
-fun LocalDb.setCountriesList(list : List<CountryListData>) {
+fun LocalDb.setCountriesList(list: List<CountryListData>) {
     countriesQueries.transaction {
         list.forEach {
             countriesQueries.upsertCountry(
@@ -20,10 +21,10 @@ fun LocalDb.setCountriesList(list : List<CountryListData>) {
     }
 }
 
-fun LocalDb.toggleFavoriteCountry(country : String) {
+fun LocalDb.toggleFavoriteCountry(country: String) {
     countriesQueries.updateFavorite(country)
 }
 
-fun LocalDb.getFavoriteCountriesMap() : Map<String,Boolean> {
-    return countriesQueries.getFavorites().executeAsList().associateBy({it}, {true})
+fun LocalDb.getFavoriteCountriesMap(): Map<String, Boolean> {
+    return countriesQueries.getFavorites().executeAsList().associateBy({ it }, { true })
 }

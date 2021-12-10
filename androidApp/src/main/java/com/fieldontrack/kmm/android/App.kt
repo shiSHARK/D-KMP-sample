@@ -5,7 +5,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.OnLifecycleEvent
 import androidx.lifecycle.ProcessLifecycleOwner
-import com.fieldontrack.kmm.shared.viewmodel.DKMPViewModel
+import com.fieldontrack.kmm.featurecore.DKMPViewModel
 import com.fieldontrack.kmm.shared.viewmodel.getAndroidInstance
 
 class DKMPApp : Application() {
@@ -15,14 +15,14 @@ class DKMPApp : Application() {
     override fun onCreate() {
         super.onCreate()
         model = DKMPViewModel.Factory.getAndroidInstance(this)
-        
+
         val appLifecycleObserver = AppLifecycleObserver(model)
         ProcessLifecycleOwner.get().lifecycle.addObserver(appLifecycleObserver)
     }
 
 }
 
-class AppLifecycleObserver (private val model: DKMPViewModel) : LifecycleObserver {
+class AppLifecycleObserver(private val model: DKMPViewModel) : LifecycleObserver {
 
     @OnLifecycleEvent(Lifecycle.Event.ON_START)
     fun onEnterForeground() {

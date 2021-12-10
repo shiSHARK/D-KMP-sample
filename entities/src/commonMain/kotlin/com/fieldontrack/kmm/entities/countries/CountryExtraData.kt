@@ -1,13 +1,10 @@
-package com.fieldontrack.kmm.shared.datalayer.objects
+package com.fieldontrack.kmm.entities.countries
 
-import kotlinx.serialization.SerialName
-import kotlinx.serialization.Serializable
 
-@Serializable
-data class CountryExtraData (
-    @SerialName("v") val vaccines : String = "",
+data class CountryExtraData(
+    val vaccines: String = "",
 ) {
-    val vaccinesList : List<String>
+    val vaccinesList: List<String>
         get() = vaccines.split(", ")
 
 }

@@ -1,6 +1,6 @@
 package com.fieldontrack.kmm.shared
 
-import com.fieldontrack.kmm.shared.datalayer.Repository
+import com.fieldontrack.kmm.featurecore.Repository
 import kotlinx.coroutines.CoroutineScope
 import kotlin.coroutines.CoroutineContext
 

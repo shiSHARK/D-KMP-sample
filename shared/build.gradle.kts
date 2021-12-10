@@ -38,6 +38,7 @@ kotlin {
                 api(project(":entities"))
                 implementation(project(":persistence"))
                 api(project(":coreinterfaces"))
+                api(project(":featurecore"))
                 implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.2.1")
                 implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0-native-mt")
                 implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.2.1")
@@ -79,7 +80,7 @@ kotlin {
         binaries.withType<org.jetbrains.kotlin.gradle.plugin.mpp.Framework> {
             isStatic = false // SwiftUI preview requires dynamic framework
             export(project(":entities"))
-//            export(project(":persistence"))
+            export(project(":featurecore"))
             export(project(":coreinterfaces"))
 //            export(project(":kmm:core:core-common"))
 //            export(project(":kmm:core:core-ios"))

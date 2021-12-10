@@ -42,7 +42,7 @@ kotlin {
 //        implementation(Deps.koinCore)
 //        implementation(Deps.kermit)
                 implementation("com.russhwolf:multiplatform-settings-no-arg:0.7.7")
-//                implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.1")
+                implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.1")
             }
         }
 

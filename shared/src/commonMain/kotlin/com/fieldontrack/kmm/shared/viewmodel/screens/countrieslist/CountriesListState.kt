@@ -1,9 +1,8 @@
 package com.fieldontrack.kmm.shared.viewmodel.screens.countrieslist
 
-import com.fieldontrack.kmm.shared.datalayer.objects.CountryListData
-import com.fieldontrack.kmm.shared.viewmodel.*
+import com.fieldontrack.kmm.featurecore.ScreenState
+import com.fieldontrack.kmm.entities.countries.CountryListData
 import com.fieldontrack.kmm.shared.viewmodel.utils.toPercentageString
-import kotlinx.serialization.Serializable
 
 // here is the data class defining the state for this screen
 

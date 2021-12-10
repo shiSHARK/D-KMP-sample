@@ -1,8 +1,12 @@
 package com.fieldontrack.kmm.shared.viewmodel
 
+import com.fieldontrack.kmm.featurecore.AppState
+import com.fieldontrack.kmm.featurecore.DKMPViewModel
+import com.fieldontrack.kmm.featurecore.Repository
 import com.fieldontrack.kmm.persistence.localdb.createIosDB
-import com.fieldontrack.kmm.shared.datalayer.Repository
 import com.fieldontrack.kmm.shared.datalayer.sources.localsettings.UserSettingsImpl
+import com.fieldontrack.kmm.shared.datalayer.sources.webservices.ApiClient
+import com.fieldontrack.kmm.shared.viewmodel.screens.navigationSettings
 import io.ktor.utils.io.core.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -14,8 +18,9 @@ import kotlinx.coroutines.flow.onEach
 fun DKMPViewModel.Factory.getIosInstance(): DKMPViewModel {
     val db = createIosDB()
     val userSettings = UserSettingsImpl()
-    val repository = Repository(db, userSettings)
-    return DKMPViewModel(repository)
+    val network = ApiClient()
+    val repository = Repository(db, userSettings, network)
+    return DKMPViewModel(repository, navigationSettings)
 }
 
 

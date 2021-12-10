@@ -1,17 +1,22 @@
 package com.fieldontrack.kmm.shared.datalayer.sources.webservices.apis
 
-import com.fieldontrack.kmm.shared.datalayer.objects.CountryListData
+import com.fieldontrack.kmm.coreinterfaces.CountriesListResponse
 import com.fieldontrack.kmm.shared.datalayer.sources.webservices.ApiClient
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
-suspend fun ApiClient.fetchCountriesList(): CountriesListResponse? {
+suspend fun ApiClient.fetchCountriesListAPI(): CountriesListResponseAPI? {
     return getResponse("/dkmpl/")
 }
 
 
 @Serializable
-data class CountriesListResponse(
-    @SerialName("data") val data : List<CountryListData>,
-    @SerialName("err") val error : String? = null,
+data class CountriesListResponseAPI(
+    @SerialName("data") val data: List<CountryListDataAPI>,
+    @SerialName("err") val error: String? = null,
+)
+
+fun CountriesListResponseAPI.toData() = CountriesListResponse(
+    data = data.map { it.toData() },
+    error = error
 )

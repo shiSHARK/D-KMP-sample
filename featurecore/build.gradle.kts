@@ -31,12 +31,22 @@ kotlin {
 
     version = "1.1"
     sourceSets {
+
+        all {
+            languageSettings.apply {
+                useExperimentalAnnotation("kotlinx.coroutines.ExperimentalCoroutinesApi")
+            }
+        }
+
         val commonMain by getting {
             dependencies {
+                implementation(project(":coreinterfaces"))
+                implementation(project(":entities"))
 //        implementation(Deps.Coroutines.common)
 //        implementation(Deps.kotlinxDateTime)
 //        implementation(Deps.koinCore)
 //        implementation(Deps.kermit)
+                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0-native-mt")
                 implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.1")
             }
         }

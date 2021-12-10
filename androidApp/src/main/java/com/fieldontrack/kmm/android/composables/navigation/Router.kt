@@ -6,7 +6,7 @@ import androidx.compose.runtime.saveable.rememberSaveableStateHolder
 import androidx.compose.ui.unit.dp
 import com.fieldontrack.kmm.android.composables.navigation.templates.OnePane
 import com.fieldontrack.kmm.android.composables.navigation.templates.TwoPane
-import com.fieldontrack.kmm.shared.viewmodel.*
+import com.fieldontrack.kmm.featurecore.Navigation
 
 @Composable
 fun Navigation.Router() {
@@ -15,7 +15,7 @@ fun Navigation.Router() {
 
     val twopaneWidthThreshold = 1000.dp
     BoxWithConstraints() {
-        if (maxWidth < maxHeight || maxWidth<twopaneWidthThreshold) {
+        if (maxWidth < maxHeight || maxWidth < twopaneWidthThreshold) {
             OnePane(screenUIsStateHolder)
         } else {
             TwoPane(screenUIsStateHolder)
@@ -24,7 +24,7 @@ fun Navigation.Router() {
 
     screenStatesToRemove.forEach {
         screenUIsStateHolder.removeState(it.URI)
-        println("FOT-KMM: removed UI screen "+it.URI)
+        println("FOT-KMM: removed UI screen " + it.URI)
     }
 
     if (!only1ScreenInBackstack) {

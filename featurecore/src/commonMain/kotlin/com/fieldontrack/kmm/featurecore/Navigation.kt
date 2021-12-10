@@ -1,15 +1,11 @@
-package com.fieldontrack.kmm.shared.viewmodel
+package com.fieldontrack.kmm.featurecore
 
-import com.fieldontrack.kmm.shared.viewmodel.screens.Level1Navigation
-import com.fieldontrack.kmm.shared.viewmodel.screens.Screen
-import com.fieldontrack.kmm.shared.viewmodel.screens.navigationSettings
-
-class Navigation(val stateManager : StateManager) {
+class Navigation(val stateManager : StateManager, val navigationSettings: NavigationSettings) {
 
     init {
         var startScreenIdentifier = navigationSettings.homeScreen.screenIdentifier
         if (navigationSettings.saveLastLevel1Screen) {
-            startScreenIdentifier = ScreenIdentifier.getByURI(dataRepository.localSettings.savedLevel1URI) ?: startScreenIdentifier
+            startScreenIdentifier = ScreenIdentifier.getByURI(dataRepository.localSettings.savedLevel1URI, navigationSettings.screens) ?: startScreenIdentifier
         }
         navigateByScreenIdentifier(startScreenIdentifier)
     }
@@ -76,7 +72,7 @@ class Navigation(val stateManager : StateManager) {
     }
 
     fun navigateByScreenIdentifier(screenIdentifier: ScreenIdentifier) {
-        debugLogger.log("navigate to /"+screenIdentifier.URI)
+//        debugLogger.log("navigate to /"+screenIdentifier.URI)
         val screenInitSettings = screenIdentifier.getScreenInitSettings(this)
         stateManager.addScreen(screenIdentifier, screenInitSettings)
         if (navigationSettings.saveLastLevel1Screen && screenIdentifier.screen.navigationLevel == 1) {
@@ -86,7 +82,7 @@ class Navigation(val stateManager : StateManager) {
 
     fun exitScreen(screenIdentifier: ScreenIdentifier? = null, triggerRecomposition: Boolean = true) {
         val sID = screenIdentifier ?: currentScreenIdentifier
-        debugLogger.log("exitScreen: "+sID.URI)
+//        debugLogger.log("exitScreen: "+sID.URI)
         stateManager.removeScreen(sID)
         if (triggerRecomposition) {
             navigateByScreenIdentifier(currentScreenIdentifier)
@@ -96,7 +92,7 @@ class Navigation(val stateManager : StateManager) {
 
     fun onReEnterForeground() {
         // not called at app startup, but only when reentering the app after it was in background
-        debugLogger.log("onReEnterForeground: recomposition is triggered")
+//        debugLogger.log("onReEnterForeground: recomposition is triggered")
         val reinitializedScreens = stateManager.reinitScreenScopes()
         stateManager.triggerRecomposition()
         reinitializedScreens.forEach {
@@ -109,12 +105,12 @@ class Navigation(val stateManager : StateManager) {
     }
 
     fun onEnterBackground() {
-        debugLogger.log("onEnterBackground: screen scopes are cancelled")
+//        debugLogger.log("onEnterBackground: screen scopes are cancelled")
         stateManager.cancelScreenScopes()
     }
 
     fun onChangeOrientation() {
-        debugLogger.log("onChangeOrientation: recomposition is triggered")
+//        debugLogger.log("onChangeOrientation: recomposition is triggered")
         stateManager.triggerRecomposition()
     }
 

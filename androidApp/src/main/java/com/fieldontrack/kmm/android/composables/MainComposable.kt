@@ -4,7 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import com.fieldontrack.kmm.android.composables.navigation.Router
-import com.fieldontrack.kmm.shared.viewmodel.DKMPViewModel
+import com.fieldontrack.kmm.featurecore.DKMPViewModel
 
 @Composable
 fun MainComposable(model: DKMPViewModel) {

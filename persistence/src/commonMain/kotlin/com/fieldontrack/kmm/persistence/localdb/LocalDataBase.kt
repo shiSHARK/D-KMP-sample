@@ -1,7 +1,7 @@
 package com.fieldontrack.kmm.persistence.localdb
 
 import com.fieldontrack.kmm.coreinterfaces.DataBase
-import com.fieldontrack.kmm.shared.datalayer.objects.CountryListData
+import com.fieldontrack.kmm.entities.countries.CountryListData
 import mylocal.db.LocalDb
 
 class LocalDataBase(private val localDb: LocalDb) : DataBase {

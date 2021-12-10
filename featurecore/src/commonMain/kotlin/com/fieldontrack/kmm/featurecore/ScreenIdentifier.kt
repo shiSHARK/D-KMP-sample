@@ -1,8 +1,5 @@
-package com.fieldontrack.kmm.shared.viewmodel
+package com.fieldontrack.kmm.featurecore
 
-import com.fieldontrack.kmm.shared.viewmodel.screens.Level1Navigation
-import com.fieldontrack.kmm.shared.viewmodel.screens.Screen
-import com.fieldontrack.kmm.shared.viewmodel.screens.ScreenInitSettings
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
 
@@ -21,9 +18,9 @@ class ScreenIdentifier private constructor(
         fun get(screen: Screen, params: ScreenParams?): ScreenIdentifier {
             return ScreenIdentifier(screen, params, null)
         }
-        fun getByURI(URI: String): ScreenIdentifier? {
+        fun getByURI(URI: String, screens: List<Screen>): ScreenIdentifier? {
             val parts = URI.split(":")
-            Screen.values().forEach {
+            screens.forEach {
                 if (it.asString == parts[0]) {
                     return ScreenIdentifier(it, null, parts[1])
                 }
@@ -71,8 +68,8 @@ class ScreenIdentifier private constructor(
         return screen.initSettings(navigation,this)
     }
 
-    fun level1VerticalBackstackEnabled() : Boolean {
-        Level1Navigation.values().forEach {
+    fun level1VerticalBackstackEnabled(level1Navigations: List<Level1Navigation>) : Boolean {
+        level1Navigations.forEach {
             if (it.screenIdentifier.URI == this.URI && it.rememberVerticalStack) {
                 return true
             }
