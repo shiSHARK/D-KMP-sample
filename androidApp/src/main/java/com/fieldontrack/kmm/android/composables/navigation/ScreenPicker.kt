@@ -7,10 +7,10 @@ import com.fieldontrack.kmm.android.composables.screens.countrieslist.CountriesL
 import com.fieldontrack.kmm.android.composables.screens.countrydetail.CountryDetailScreen
 import com.fieldontrack.kmm.feature.core.Navigation
 import com.fieldontrack.kmm.feature.core.ScreenIdentifier
-import com.fieldontrack.kmm.shared.viewmodel.screens.ScreenImpl.CountriesList
-import com.fieldontrack.kmm.shared.viewmodel.screens.ScreenImpl.CountryDetail
-import com.fieldontrack.kmm.shared.viewmodel.screens.countrieslist.selectFavorite
-import com.fieldontrack.kmm.shared.viewmodel.screens.countrydetail.CountryDetailParams
+import com.fieldontrack.kmm.navigation.ScreenImpl.CountriesList
+import com.fieldontrack.kmm.navigation.ScreenImpl.CountryDetail
+import com.fieldontrack.kmm.feature.sample.countrieslist.selectFavorite
+import com.fieldontrack.kmm.feature.sample.countrydetail.CountryDetailParams
 
 
 @Composable

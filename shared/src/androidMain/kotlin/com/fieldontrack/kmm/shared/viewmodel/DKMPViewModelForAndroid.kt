@@ -5,8 +5,8 @@ import com.fieldontrack.kmm.feature.core.DKMPViewModel
 import com.fieldontrack.kmm.feature.core.Repository
 import com.fieldontrack.kmm.persistence.localdb.createAndroidDB
 import com.fieldontrack.kmm.persistence.localsettings.UserSettingsImpl
-import com.fieldontrack.kmm.shared.datalayer.sources.webservices.ApiClient
-import com.fieldontrack.kmm.shared.viewmodel.screens.navigationSettings
+import com.fieldontrack.kmm.network.webservices.ApiClient
+import com.fieldontrack.kmm.navigation.navigationSettings
 
 
 fun DKMPViewModel.Factory.getAndroidInstance(context: Context): DKMPViewModel {

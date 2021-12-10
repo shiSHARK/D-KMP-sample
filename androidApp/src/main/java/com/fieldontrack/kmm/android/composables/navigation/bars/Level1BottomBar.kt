@@ -11,7 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.unit.sp
 import com.fieldontrack.kmm.feature.core.Navigation
 import com.fieldontrack.kmm.feature.core.ScreenIdentifier
-import com.fieldontrack.kmm.shared.viewmodel.screens.Level1NavigationImpl
+import com.fieldontrack.kmm.navigation.Level1NavigationImpl
 
 
 // this is the bottom horizontal navigation bar for 1-Pane visualization

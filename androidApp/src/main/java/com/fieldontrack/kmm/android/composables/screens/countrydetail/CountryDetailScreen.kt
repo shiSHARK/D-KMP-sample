@@ -8,7 +8,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.fieldontrack.kmm.android.composables.screens.LoadingScreen
-import com.fieldontrack.kmm.shared.viewmodel.screens.countrydetail.CountryDetailState
+import com.fieldontrack.kmm.feature.sample.countrydetail.CountryDetailState
 
 @Composable
 fun CountryDetailScreen(

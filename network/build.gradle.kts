@@ -33,15 +33,18 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-                implementation(project(":entities"))
                 implementation(project(":common"))
-                implementation(project(":featureCore"))
+                implementation(project(":entities"))
+                implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.2.1")
+                implementation("io.ktor:ktor-client-core:${Versions.ktor}")
+                implementation("io.ktor:ktor-client-json:${Versions.ktor}")
+                implementation("io.ktor:ktor-client-logging:${Versions.ktor}")
+                implementation("io.ktor:ktor-client-serialization:${Versions.ktor}")
 //        implementation(Deps.Coroutines.common)
 //        implementation(Deps.kotlinxDateTime)
 //        implementation(Deps.koinCore)
 //        implementation(Deps.kermit)
-                implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.1")
-                implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.3.1")
+//                implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.1")
             }
         }
 
@@ -54,6 +57,7 @@ kotlin {
         val androidMain by getting {
             dependencies {
 //        implementation(Deps.Coroutines.android)
+                implementation("io.ktor:ktor-client-android:${Versions.ktor}")
             }
         }
 
@@ -64,6 +68,7 @@ kotlin {
 
         val iosMain by getting {
             dependencies {
+                implementation("io.ktor:ktor-client-ios:${Versions.ktor}")
 //        implementation(Deps.Coroutines.common) {
 //            version {
 //                strictly(Versions.coroutines)

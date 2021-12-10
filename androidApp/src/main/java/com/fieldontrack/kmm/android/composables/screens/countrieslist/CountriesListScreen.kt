@@ -13,7 +13,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.fieldontrack.kmm.android.composables.screens.LoadingScreen
-import com.fieldontrack.kmm.shared.viewmodel.screens.countrieslist.CountriesListState
+import com.fieldontrack.kmm.feature.sample.countrieslist.CountriesListState
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable

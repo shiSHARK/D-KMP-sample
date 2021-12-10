@@ -37,8 +37,11 @@ kotlin {
             dependencies {
                 api(project(":entities"))
                 implementation(project(":persistence"))
+                implementation(project(":network"))
                 api(project(":common"))
+                api(project(":navigation"))
                 api(project(":featureCore"))
+                api(project(":sampleFeature"))
                 implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.2.1")
                 implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0-native-mt")
                 implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.2.1")
@@ -81,7 +84,9 @@ kotlin {
             isStatic = false // SwiftUI preview requires dynamic framework
             export(project(":entities"))
             export(project(":featureCore"))
+            export(project(":sampleFeature"))
             export(project(":common"))
+            export(project(":navigation"))
 //            export(project(":kmm:core:core-common"))
 //            export(project(":kmm:core:core-ios"))
 //            export(project(":kmm:todos:todos-list-api"))

@@ -14,7 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import com.fieldontrack.kmm.shared.viewmodel.screens.countrieslist.CountriesListItem
+import com.fieldontrack.kmm.feature.sample.countrieslist.CountriesListItem
 
 @Composable
 fun CountriesListRow(

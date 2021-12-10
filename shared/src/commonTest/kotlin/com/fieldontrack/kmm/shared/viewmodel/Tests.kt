@@ -4,15 +4,15 @@ import com.fieldontrack.kmm.entities.countries.CountryExtraData
 import com.fieldontrack.kmm.feature.core.DKMPViewModel
 import com.fieldontrack.kmm.feature.core.ScreenIdentifier
 import com.fieldontrack.kmm.shared.getTestRepository
-import com.fieldontrack.kmm.shared.viewmodel.screens.ScreenImpl.CountriesList
-import com.fieldontrack.kmm.shared.viewmodel.screens.ScreenImpl.CountryDetail
-import com.fieldontrack.kmm.shared.viewmodel.screens.countrieslist.CountriesListParams
-import com.fieldontrack.kmm.shared.viewmodel.screens.countrieslist.CountriesListState
-import com.fieldontrack.kmm.shared.viewmodel.screens.countrieslist.CountriesListType
-import com.fieldontrack.kmm.shared.viewmodel.screens.countrydetail.CountryDetailParams
-import com.fieldontrack.kmm.shared.viewmodel.screens.countrydetail.CountryDetailState
-import com.fieldontrack.kmm.shared.viewmodel.screens.countrydetail.CountryInfo
-import com.fieldontrack.kmm.shared.viewmodel.screens.navigationSettings
+import com.fieldontrack.kmm.navigation.ScreenImpl.CountriesList
+import com.fieldontrack.kmm.navigation.ScreenImpl.CountryDetail
+import com.fieldontrack.kmm.feature.sample.countrieslist.CountriesListParams
+import com.fieldontrack.kmm.feature.sample.countrieslist.CountriesListState
+import com.fieldontrack.kmm.feature.sample.countrieslist.CountriesListType
+import com.fieldontrack.kmm.feature.sample.countrydetail.CountryDetailParams
+import com.fieldontrack.kmm.feature.sample.countrydetail.CountryDetailState
+import com.fieldontrack.kmm.feature.sample.countrydetail.CountryInfo
+import com.fieldontrack.kmm.navigation.navigationSettings
 import kotlin.test.Test
 import kotlin.test.assertTrue
 

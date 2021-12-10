@@ -5,8 +5,8 @@ import com.fieldontrack.kmm.feature.core.DKMPViewModel
 import com.fieldontrack.kmm.feature.core.Repository
 import com.fieldontrack.kmm.persistence.localdb.createIosDB
 import com.fieldontrack.kmm.persistence.localsettings.UserSettingsImpl
-import com.fieldontrack.kmm.shared.datalayer.sources.webservices.ApiClient
-import com.fieldontrack.kmm.shared.viewmodel.screens.navigationSettings
+import com.fieldontrack.kmm.network.webservices.ApiClient
+import com.fieldontrack.kmm.navigation.navigationSettings
 import io.ktor.utils.io.core.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

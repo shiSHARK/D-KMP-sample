@@ -36,12 +36,12 @@ kotlin {
                 implementation(project(":entities"))
                 implementation(project(":common"))
                 implementation(project(":featureCore"))
+                implementation(project(":sampleFeature"))
 //        implementation(Deps.Coroutines.common)
 //        implementation(Deps.kotlinxDateTime)
 //        implementation(Deps.koinCore)
 //        implementation(Deps.kermit)
-                implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.1")
-                implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.3.1")
+//                implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.1")
             }
         }
 
