@@ -6,7 +6,7 @@ import androidx.compose.runtime.saveable.rememberSaveableStateHolder
 import androidx.compose.ui.unit.dp
 import com.fieldontrack.kmm.android.composables.navigation.templates.OnePane
 import com.fieldontrack.kmm.android.composables.navigation.templates.TwoPane
-import com.fieldontrack.kmm.featurecore.Navigation
+import com.fieldontrack.kmm.feature.core.Navigation
 
 @Composable
 fun Navigation.Router() {

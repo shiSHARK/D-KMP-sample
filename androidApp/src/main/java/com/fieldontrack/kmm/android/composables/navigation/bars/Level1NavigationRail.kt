@@ -16,8 +16,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.fieldontrack.kmm.featurecore.Navigation
-import com.fieldontrack.kmm.featurecore.ScreenIdentifier
+import com.fieldontrack.kmm.feature.core.Navigation
+import com.fieldontrack.kmm.feature.core.ScreenIdentifier
 import com.fieldontrack.kmm.shared.viewmodel.screens.Level1NavigationImpl
 
 

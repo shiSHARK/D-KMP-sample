@@ -11,7 +11,8 @@ rootProject.name = "fieldontrack-multiplatform-mobile"
 
 include(":androidApp")
 include(":entities")
-include(":featurecore")
+include(":featureCore")
 include(":persistence")
-include(":coreinterfaces")
+include(":common")
+include(":sampleFeature")
 include(":shared")

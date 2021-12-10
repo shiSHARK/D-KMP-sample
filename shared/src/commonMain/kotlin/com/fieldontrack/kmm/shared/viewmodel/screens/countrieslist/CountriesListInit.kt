@@ -1,8 +1,8 @@
 package com.fieldontrack.kmm.shared.viewmodel.screens.countrieslist
 
-import com.fieldontrack.kmm.featurecore.Navigation
-import com.fieldontrack.kmm.featurecore.ScreenInitSettings
-import com.fieldontrack.kmm.featurecore.ScreenParams
+import com.fieldontrack.kmm.feature.core.Navigation
+import com.fieldontrack.kmm.feature.core.ScreenInitSettings
+import com.fieldontrack.kmm.feature.core.ScreenParams
 import com.fieldontrack.kmm.shared.datalayer.functions.getCountriesListData
 import com.fieldontrack.kmm.shared.datalayer.functions.getFavoriteCountriesMap
 import kotlinx.serialization.Serializable

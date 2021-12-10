@@ -1,6 +1,6 @@
 package com.fieldontrack.kmm.persistence.localsettings
 
-import com.fieldontrack.kmm.coreinterfaces.UserSettings
+import com.fieldontrack.kmm.common.UserSettings
 import com.russhwolf.settings.Settings
 import com.russhwolf.settings.long
 import com.russhwolf.settings.string

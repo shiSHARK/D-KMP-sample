@@ -2,7 +2,7 @@ package com.fieldontrack.kmm.shared.viewmodel.screens.countrydetail
 
 import com.fieldontrack.kmm.entities.countries.CountryExtraData
 import com.fieldontrack.kmm.entities.countries.CountryListData
-import com.fieldontrack.kmm.featurecore.ScreenState
+import com.fieldontrack.kmm.feature.core.ScreenState
 import com.fieldontrack.kmm.shared.viewmodel.utils.toCommaThousandString
 import com.fieldontrack.kmm.shared.viewmodel.utils.toPercentageString
 

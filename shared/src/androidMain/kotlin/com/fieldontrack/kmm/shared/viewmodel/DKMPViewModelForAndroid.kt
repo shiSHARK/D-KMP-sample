@@ -1,8 +1,8 @@
 package com.fieldontrack.kmm.shared.viewmodel
 
 import android.content.Context
-import com.fieldontrack.kmm.featurecore.DKMPViewModel
-import com.fieldontrack.kmm.featurecore.Repository
+import com.fieldontrack.kmm.feature.core.DKMPViewModel
+import com.fieldontrack.kmm.feature.core.Repository
 import com.fieldontrack.kmm.persistence.localdb.createAndroidDB
 import com.fieldontrack.kmm.persistence.localsettings.UserSettingsImpl
 import com.fieldontrack.kmm.shared.datalayer.sources.webservices.ApiClient

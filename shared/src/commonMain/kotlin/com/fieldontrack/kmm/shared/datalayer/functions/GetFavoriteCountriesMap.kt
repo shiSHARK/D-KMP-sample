@@ -1,6 +1,6 @@
 package com.fieldontrack.kmm.shared.datalayer.functions
 
-import com.fieldontrack.kmm.featurecore.Repository
+import com.fieldontrack.kmm.feature.core.Repository
 
 suspend fun Repository.getFavoriteCountriesMap(alsoToggleCountry: String? = null): Map<String, Boolean> =
     withRepoContext {

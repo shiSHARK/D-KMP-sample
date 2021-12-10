@@ -1,9 +1,9 @@
 package com.fieldontrack.kmm.shared.viewmodel.screens
 
-import com.fieldontrack.kmm.featurecore.Navigation
-import com.fieldontrack.kmm.featurecore.Screen
-import com.fieldontrack.kmm.featurecore.ScreenIdentifier
-import com.fieldontrack.kmm.featurecore.ScreenInitSettings
+import com.fieldontrack.kmm.feature.core.Navigation
+import com.fieldontrack.kmm.feature.core.Screen
+import com.fieldontrack.kmm.feature.core.ScreenIdentifier
+import com.fieldontrack.kmm.feature.core.ScreenInitSettings
 import com.fieldontrack.kmm.shared.viewmodel.screens.countrieslist.initCountriesList
 import com.fieldontrack.kmm.shared.viewmodel.screens.countrydetail.initCountryDetail
 

@@ -1,8 +1,8 @@
 package com.fieldontrack.kmm.shared.datalayer.sources.webservices
 
-import com.fieldontrack.kmm.coreinterfaces.CountriesListResponse
-import com.fieldontrack.kmm.coreinterfaces.CountryExtraResponse
-import com.fieldontrack.kmm.coreinterfaces.NetworkClient
+import com.fieldontrack.kmm.common.CountriesListResponse
+import com.fieldontrack.kmm.common.CountryExtraResponse
+import com.fieldontrack.kmm.common.NetworkClient
 import com.fieldontrack.kmm.shared.datalayer.sources.webservices.apis.fetchCountriesListAPI
 import com.fieldontrack.kmm.shared.datalayer.sources.webservices.apis.fetchCountryExtraDataAPI
 import com.fieldontrack.kmm.shared.datalayer.sources.webservices.apis.toData

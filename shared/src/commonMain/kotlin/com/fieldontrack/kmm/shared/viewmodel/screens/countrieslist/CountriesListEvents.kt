@@ -1,6 +1,6 @@
 package com.fieldontrack.kmm.shared.viewmodel.screens.countrieslist
 
-import com.fieldontrack.kmm.featurecore.Events
+import com.fieldontrack.kmm.feature.core.Events
 import com.fieldontrack.kmm.shared.datalayer.functions.getFavoriteCountriesMap
 
 

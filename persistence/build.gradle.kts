@@ -36,7 +36,7 @@ kotlin {
             dependencies {
 
                 implementation(project(":entities"))
-                implementation(project(":coreinterfaces"))
+                implementation(project(":common"))
 //        implementation(Deps.Coroutines.common)
 //        implementation(Deps.kotlinxDateTime)
 //        implementation(Deps.koinCore)

@@ -1,6 +1,6 @@
 package com.fieldontrack.kmm.shared.datalayer.functions
 
-import com.fieldontrack.kmm.featurecore.Repository
+import com.fieldontrack.kmm.feature.core.Repository
 import com.fieldontrack.kmm.shared.debugLogger
 import com.fieldontrack.kmm.shared.viewmodel.screens.countrieslist.CountriesListItem
 import kotlinx.datetime.Clock

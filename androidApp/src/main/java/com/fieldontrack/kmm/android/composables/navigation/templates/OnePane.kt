@@ -6,7 +6,7 @@ import androidx.compose.runtime.saveable.SaveableStateHolder
 import com.fieldontrack.kmm.android.composables.navigation.ScreenPicker
 import com.fieldontrack.kmm.android.composables.navigation.bars.Level1BottomBar
 import com.fieldontrack.kmm.android.composables.navigation.bars.TopBar
-import com.fieldontrack.kmm.featurecore.Navigation
+import com.fieldontrack.kmm.feature.core.Navigation
 
 @Composable
 fun Navigation.OnePane(

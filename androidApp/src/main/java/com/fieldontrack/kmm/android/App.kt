@@ -5,7 +5,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.OnLifecycleEvent
 import androidx.lifecycle.ProcessLifecycleOwner
-import com.fieldontrack.kmm.featurecore.DKMPViewModel
+import com.fieldontrack.kmm.feature.core.DKMPViewModel
 import com.fieldontrack.kmm.shared.viewmodel.getAndroidInstance
 
 class DKMPApp : Application() {

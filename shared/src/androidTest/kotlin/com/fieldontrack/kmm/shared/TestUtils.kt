@@ -1,6 +1,6 @@
 package com.fieldontrack.kmm.shared
 
-import com.fieldontrack.kmm.featurecore.Repository
+import com.fieldontrack.kmm.feature.core.Repository
 import com.fieldontrack.kmm.persistence.localdb.createAndroidTestDB
 import com.fieldontrack.kmm.persistence.localsettings.UserSettingsImpl
 import com.fieldontrack.kmm.shared.datalayer.sources.webservices.ApiClient

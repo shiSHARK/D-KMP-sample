@@ -1,8 +1,8 @@
 package com.fieldontrack.kmm.shared.viewmodel
 
 import com.fieldontrack.kmm.entities.countries.CountryExtraData
-import com.fieldontrack.kmm.featurecore.DKMPViewModel
-import com.fieldontrack.kmm.featurecore.ScreenIdentifier
+import com.fieldontrack.kmm.feature.core.DKMPViewModel
+import com.fieldontrack.kmm.feature.core.ScreenIdentifier
 import com.fieldontrack.kmm.shared.getTestRepository
 import com.fieldontrack.kmm.shared.viewmodel.screens.ScreenImpl.CountriesList
 import com.fieldontrack.kmm.shared.viewmodel.screens.ScreenImpl.CountryDetail

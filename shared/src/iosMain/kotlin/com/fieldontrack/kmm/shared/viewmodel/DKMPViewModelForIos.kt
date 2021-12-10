@@ -1,8 +1,8 @@
 package com.fieldontrack.kmm.shared.viewmodel
 
-import com.fieldontrack.kmm.featurecore.AppState
-import com.fieldontrack.kmm.featurecore.DKMPViewModel
-import com.fieldontrack.kmm.featurecore.Repository
+import com.fieldontrack.kmm.feature.core.AppState
+import com.fieldontrack.kmm.feature.core.DKMPViewModel
+import com.fieldontrack.kmm.feature.core.Repository
 import com.fieldontrack.kmm.persistence.localdb.createIosDB
 import com.fieldontrack.kmm.persistence.localsettings.UserSettingsImpl
 import com.fieldontrack.kmm.shared.datalayer.sources.webservices.ApiClient
