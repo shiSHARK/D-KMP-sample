@@ -29,8 +29,12 @@ fun CountryDetailScreen(
 
             Spacer(modifier = Modifier.size(24.dp))
 
-            if (data.vaccinesList!=null) {
-                Text(text = "Vaccines:", style = MaterialTheme.typography.body1, fontWeight = FontWeight.Bold)
+            if (data.vaccinesList != null) {
+                Text(
+                    text = "Vaccines:",
+                    style = MaterialTheme.typography.body1,
+                    fontWeight = FontWeight.Bold
+                )
                 for (vaccine in data.vaccinesList!!) {
                     Text(text = "   ‣ $vaccine", style = MaterialTheme.typography.body1)
                 }
@@ -41,13 +45,16 @@ fun CountryDetailScreen(
 }
 
 
-
 @Composable
-fun DataElement(label : String, value : String = "", percentage : String = "") {
+fun DataElement(label: String, value: String = "", percentage: String = "") {
     Row {
-        Text(text = "$label: ", style = MaterialTheme.typography.body1, fontWeight = FontWeight.Bold)
+        Text(
+            text = "$label: ",
+            style = MaterialTheme.typography.body1,
+            fontWeight = FontWeight.Bold
+        )
         Text(text = value, style = MaterialTheme.typography.body1)
-        if (percentage!="") {
+        if (percentage != "") {
             Text(text = " ($percentage)", style = MaterialTheme.typography.body1)
         }
     }

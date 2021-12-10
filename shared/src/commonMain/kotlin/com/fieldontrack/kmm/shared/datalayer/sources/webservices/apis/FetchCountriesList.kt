@@ -12,7 +12,7 @@ suspend fun ApiClient.fetchCountriesListAPI(): CountriesListResponseAPI? {
 
 @Serializable
 data class CountriesListResponseAPI(
-    @SerialName("data") val data: List<CountryListDataAPI>,
+    @SerialName("data") val data: List<CountryListAPIData>,
     @SerialName("err") val error: String? = null,
 )
 

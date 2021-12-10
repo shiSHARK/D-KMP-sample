@@ -4,7 +4,7 @@ import com.fieldontrack.kmm.featurecore.Repository
 import kotlinx.coroutines.CoroutineScope
 import kotlin.coroutines.CoroutineContext
 
-expect fun runBlockingTest(block: suspend CoroutineScope.()-> Unit)
+expect fun runBlockingTest(block: suspend CoroutineScope.() -> Unit)
 expect val testCoroutineContext: CoroutineContext
 
-expect fun getTestRepository() : Repository
+expect fun getTestRepository(): Repository

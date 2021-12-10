@@ -4,9 +4,10 @@ import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.material.*
-import androidx.compose.runtime.Composable
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Text
+import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -19,7 +20,7 @@ import com.fieldontrack.kmm.shared.viewmodel.screens.countrieslist.CountriesList
 fun CountriesListScreen(
     countriesListState: CountriesListState,
     onListItemClick: (String) -> Unit,
-    onFavoriteIconClick : (String) -> Unit,
+    onFavoriteIconClick: (String) -> Unit,
 ) {
     if (countriesListState.isLoading) {
 
@@ -30,7 +31,9 @@ fun CountriesListScreen(
             Text(
                 text = "empty list",
                 style = MaterialTheme.typography.body1,
-                modifier = Modifier.padding(top = 30.dp).fillMaxWidth(),
+                modifier = Modifier
+                    .padding(top = 30.dp)
+                    .fillMaxWidth(),
                 textAlign = TextAlign.Center,
                 fontSize = 18.sp
             )

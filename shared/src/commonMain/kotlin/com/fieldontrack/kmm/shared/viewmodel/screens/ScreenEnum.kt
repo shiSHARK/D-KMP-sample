@@ -12,10 +12,10 @@ import com.fieldontrack.kmm.shared.viewmodel.screens.countrydetail.initCountryDe
 
 enum class ScreenImpl(
     override val asString: String,
-    override val navigationLevel : Int = 1,
+    override val navigationLevel: Int = 1,
     override val initSettings: Navigation.(ScreenIdentifier) -> ScreenInitSettings,
-    override val stackableInstances : Boolean = false,
-):Screen {
+    override val stackableInstances: Boolean = false,
+) : Screen {
     CountriesList("countrieslist", 1, { initCountriesList(it.params()) }, true),
     CountryDetail("country", 2, { initCountryDetail(it.params()) }),
 }

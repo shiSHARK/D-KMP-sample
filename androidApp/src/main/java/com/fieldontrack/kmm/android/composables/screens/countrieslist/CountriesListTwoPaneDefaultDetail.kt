@@ -13,7 +13,9 @@ import androidx.compose.ui.unit.sp
 @Composable
 fun CountriesListTwoPaneDefaultDetail() {
     Column(
-        modifier = Modifier.fillMaxWidth().fillMaxHeight(),
+        modifier = Modifier
+            .fillMaxWidth()
+            .fillMaxHeight(),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center,
     ) {

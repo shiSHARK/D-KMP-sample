@@ -5,21 +5,21 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class CountryListDataAPI(
+data class CountryListAPIData(
     @SerialName("n") val name: String = "",
     @SerialName("p") val population: Int = 0,
     @SerialName("fd") val firstDoses: Int = 0,
     @SerialName("fv") val fullyVaccinated: Int = 0,
 )
 
-fun CountryListData.toAPI() = CountryListDataAPI(
+fun CountryListData.toAPI() = CountryListAPIData(
     name = name,
     population = population,
     firstDoses = firstDoses,
     fullyVaccinated = fullyVaccinated,
 )
 
-fun CountryListDataAPI.toData() = CountryListData(
+fun CountryListAPIData.toData() = CountryListData(
     name = name,
     population = population,
     firstDoses = firstDoses,

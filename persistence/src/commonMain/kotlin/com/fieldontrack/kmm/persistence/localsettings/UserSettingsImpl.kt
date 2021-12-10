@@ -1,9 +1,9 @@
-package com.fieldontrack.kmm.shared.datalayer.sources.localsettings
+package com.fieldontrack.kmm.persistence.localsettings
 
+import com.fieldontrack.kmm.coreinterfaces.UserSettings
 import com.russhwolf.settings.Settings
 import com.russhwolf.settings.long
 import com.russhwolf.settings.string
-import com.fieldontrack.kmm.coreinterfaces.UserSettings
 
 class UserSettingsImpl(s: Settings = Settings()) : UserSettings {
 

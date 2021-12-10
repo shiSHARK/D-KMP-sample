@@ -2,7 +2,7 @@ package com.fieldontrack.kmm.shared
 
 import com.fieldontrack.kmm.featurecore.Repository
 import com.fieldontrack.kmm.persistence.localdb.createIosDB
-import com.fieldontrack.kmm.shared.datalayer.sources.localsettings.UserSettingsImpl
+import com.fieldontrack.kmm.persistence.localsettings.UserSettingsImpl
 import com.fieldontrack.kmm.shared.datalayer.sources.webservices.ApiClient
 import com.russhwolf.settings.MockSettings
 import kotlinx.coroutines.CoroutineScope

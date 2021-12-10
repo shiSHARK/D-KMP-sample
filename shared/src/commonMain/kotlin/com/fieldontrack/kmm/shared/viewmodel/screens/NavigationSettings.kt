@@ -10,8 +10,9 @@ import com.fieldontrack.kmm.shared.viewmodel.screens.countrieslist.CountriesList
 
 // CONFIGURATION SETTINGS
 
-object navigationSettings: NavigationSettings {
-    override val homeScreen = Level1NavigationImpl.AllCountries // the start screen should be specified here
+object navigationSettings : NavigationSettings {
+    override val homeScreen =
+        Level1NavigationImpl.AllCountries // the start screen should be specified here
     override val saveLastLevel1Screen = true
     override val alwaysQuitOnHomeScreen = true
     override val level1Navigations = Level1NavigationImpl.values().toList()
@@ -21,8 +22,21 @@ object navigationSettings: NavigationSettings {
 
 // LEVEL 1 NAVIGATION OF THE APP
 
-enum class Level1NavigationImpl(override val screenIdentifier: ScreenIdentifier, override val rememberVerticalStack: Boolean = false):
+enum class Level1NavigationImpl(
+    override val screenIdentifier: ScreenIdentifier,
+    override val rememberVerticalStack: Boolean = false
+) :
     Level1Navigation {
-    AllCountries( ScreenIdentifier.get(ScreenImpl.CountriesList, CountriesListParams(listType = CountriesListType.ALL)), true),
-    FavoriteCountries( ScreenIdentifier.get(ScreenImpl.CountriesList, CountriesListParams(listType = CountriesListType.FAVORITES)), true),
+    AllCountries(
+        ScreenIdentifier.get(
+            ScreenImpl.CountriesList,
+            CountriesListParams(listType = CountriesListType.ALL)
+        ), true
+    ),
+    FavoriteCountries(
+        ScreenIdentifier.get(
+            ScreenImpl.CountriesList,
+            CountriesListParams(listType = CountriesListType.FAVORITES)
+        ), true
+    ),
 }

@@ -13,7 +13,7 @@ import kotlinx.serialization.Serializable
 @Serializable // Note: ScreenParams should always be set as Serializable
 data class CountryDetailParams(val countryName: String) : ScreenParams
 
-fun Navigation.initCountryDetail(params: CountryDetailParams) = ScreenInitSettings (
+fun Navigation.initCountryDetail(params: CountryDetailParams) = ScreenInitSettings(
     title = params.countryName,
     initState = { CountryDetailState(isLoading = true) },
     callOnInit = {

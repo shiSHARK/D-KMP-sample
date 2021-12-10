@@ -1,11 +1,14 @@
 package com.fieldontrack.kmm.featurecore
 
-class Navigation(val stateManager : StateManager, val navigationSettings: NavigationSettings) {
+class Navigation(val stateManager: StateManager, val navigationSettings: NavigationSettings) {
 
     init {
         var startScreenIdentifier = navigationSettings.homeScreen.screenIdentifier
         if (navigationSettings.saveLastLevel1Screen) {
-            startScreenIdentifier = ScreenIdentifier.getByURI(dataRepository.localSettings.savedLevel1URI, navigationSettings.screens) ?: startScreenIdentifier
+            startScreenIdentifier = ScreenIdentifier.getByURI(
+                dataRepository.localSettings.savedLevel1URI,
+                navigationSettings.screens
+            ) ?: startScreenIdentifier
         }
         navigateByScreenIdentifier(startScreenIdentifier)
     }
@@ -13,7 +16,7 @@ class Navigation(val stateManager : StateManager, val navigationSettings: Naviga
     val stateProvider by lazy { StateProvider(stateManager) }
     val events by lazy { Events(stateManager) }
 
-    fun getTitle(screenIdentifier: ScreenIdentifier) : String {
+    fun getTitle(screenIdentifier: ScreenIdentifier): String {
         val screenInitSettings = screenIdentifier.getScreenInitSettings(this)
         return screenInitSettings.title
     }
@@ -21,31 +24,31 @@ class Navigation(val stateManager : StateManager, val navigationSettings: Naviga
     val dataRepository
         get() = stateManager.dataRepository
 
-    val currentScreenIdentifier : ScreenIdentifier
+    val currentScreenIdentifier: ScreenIdentifier
         get() = stateManager.currentScreenIdentifier
 
-    val currentLevel1ScreenIdentifier : ScreenIdentifier
+    val currentLevel1ScreenIdentifier: ScreenIdentifier
         get() = stateManager.currentLevel1ScreenIdentifier
 
-    val only1ScreenInBackstack : Boolean
+    val only1ScreenInBackstack: Boolean
         get() = stateManager.only1ScreenInBackstack
 
 
     // used by the Router composable in Compose apps
     // it returns a list of screens whose state has been removed, so they should also be removed from Compose's SaveableStateHolder
-    val screenStatesToRemove : List<ScreenIdentifier>
+    val screenStatesToRemove: List<ScreenIdentifier>
         get() = stateManager.getScreenStatesToRemove()
 
     // used by the Router view in SwiftUI apps
     // it returns the list of Level1 screens to be rendered inside a SwiftUI's ZStack
-    val level1ScreenIdentifiers : List<ScreenIdentifier>
+    val level1ScreenIdentifiers: List<ScreenIdentifier>
         get() = stateManager.getLevel1ScreenIdentifiers()
 
-    fun getNavigationLevelsMap(level1ScreenIdentifier: ScreenIdentifier) : Map<Int,ScreenIdentifier>? {
+    fun getNavigationLevelsMap(level1ScreenIdentifier: ScreenIdentifier): Map<Int, ScreenIdentifier>? {
         return stateManager.verticalNavigationLevels[level1ScreenIdentifier.URI]
     }
 
-    fun isInCurrentVerticalBackstack(screenIdentifier: ScreenIdentifier) : Boolean {
+    fun isInCurrentVerticalBackstack(screenIdentifier: ScreenIdentifier): Boolean {
         stateManager.currentVerticalBackstack.forEach {
             if (it.URI == screenIdentifier.URI) {
                 return true
@@ -56,12 +59,12 @@ class Navigation(val stateManager : StateManager, val navigationSettings: Naviga
 
 
     fun navigate(screen: Screen, params: ScreenParams? = null) {
-        navigateByScreenIdentifier(ScreenIdentifier.get(screen,params))
+        navigateByScreenIdentifier(ScreenIdentifier.get(screen, params))
     }
 
     fun navigateByLevel1Menu(level1NavigationItem: Level1Navigation) {
         val navigationLevelsMap = getNavigationLevelsMap(level1NavigationItem.screenIdentifier)
-        if (navigationLevelsMap==null) {
+        if (navigationLevelsMap == null) {
             navigateByScreenIdentifier(level1NavigationItem.screenIdentifier)
         } else {
             navigationLevelsMap.keys.sorted().forEach {
@@ -80,7 +83,10 @@ class Navigation(val stateManager : StateManager, val navigationSettings: Naviga
         }
     }
 
-    fun exitScreen(screenIdentifier: ScreenIdentifier? = null, triggerRecomposition: Boolean = true) {
+    fun exitScreen(
+        screenIdentifier: ScreenIdentifier? = null,
+        triggerRecomposition: Boolean = true
+    ) {
         val sID = screenIdentifier ?: currentScreenIdentifier
 //        debugLogger.log("exitScreen: "+sID.URI)
         stateManager.removeScreen(sID)

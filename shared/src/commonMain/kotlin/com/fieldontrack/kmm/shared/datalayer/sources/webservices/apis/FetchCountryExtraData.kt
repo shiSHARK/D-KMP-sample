@@ -6,12 +6,12 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 suspend fun ApiClient.fetchCountryExtraDataAPI(country: String): CountryExtraResponseAPI? {
-    return getResponse("/dkmpd/"+country.replace(" ","_"))
+    return getResponse("/dkmpd/" + country.replace(" ", "_"))
 }
 
 @Serializable
 data class CountryExtraResponseAPI(
-    @SerialName("data") val data: CountryExtraDataAPI,
+    @SerialName("data") val data: CountryExtraAPIData,
     @SerialName("err") val error: String? = null,
 )
 
