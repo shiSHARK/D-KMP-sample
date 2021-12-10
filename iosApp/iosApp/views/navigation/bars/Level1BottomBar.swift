@@ -19,15 +19,15 @@ extension Navigation {
         BottomBarButton(
             itemLabel: "All Countries",
             iconName: "list.bullet",
-            selected: selectedTab.URI==Level1Navigation.allcountries.screenIdentifier.URI,
-            onClick: { self.navigateByLevel1Menu(level1NavigationItem: Level1Navigation.allcountries) }
+            selected: selectedTab.URI==Level1NavigationImpl.allcountries.screenIdentifier.URI,
+            onClick: { self.navigateByLevel1Menu(level1NavigationItem: Level1NavigationImpl.allcountries) }
         )
         Spacer()
         BottomBarButton(
             itemLabel: "Favorites",
             iconName: "star.fill",
-            selected: selectedTab.URI==Level1Navigation.favoritecountries.screenIdentifier.URI,
-            onClick: { self.navigateByLevel1Menu(level1NavigationItem: Level1Navigation.favoritecountries) }
+            selected: selectedTab.URI==Level1NavigationImpl.favoritecountries.screenIdentifier.URI,
+            onClick: { self.navigateByLevel1Menu(level1NavigationItem: Level1NavigationImpl.favoritecountries) }
         )
         Spacer()
 

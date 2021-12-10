@@ -14,16 +14,16 @@ extension Navigation {
         
         VStack {
         
-            switch sId.screen {
+            switch sId.screen.asString {
             
-            case .countrieslist:
+            case ScreenImpl.countrieslist.asString :
                 CountriesListScreen(
                     countriesListState: self.stateProvider.getToCast(screenIdentifier: sId) as! CountriesListState,
-                    onListItemClick: { name in self.navigate(.countrydetail, CountryDetailParams(countryName: name)) },
+                    onListItemClick: { name in self.navigate(ScreenImpl.countrydetail, CountryDetailParams(countryName: name)) },
                     onFavoriteIconClick: { name in self.events.selectFavorite(countryName: name) }
                 )
                 
-            case .countrydetail:
+            case ScreenImpl.countrydetail.asString :
                 CountryDetailScreen(
                     countryDetailState: self.stateProvider.getToCast(screenIdentifier: sId) as! CountryDetailState
                 )
@@ -38,9 +38,9 @@ extension Navigation {
     
     @ViewBuilder func twoPaneDefaultDetail(_ sId: ScreenIdentifier) -> some View {
         
-        switch sId.screen {
+        switch sId.screen.asString {
 
-        case .countrieslist: CountriesListTwoPaneDefaultDetail()
+        case ScreenImpl.countrieslist.asString: CountriesListTwoPaneDefaultDetail()
 
         default:
             EmptyView()
